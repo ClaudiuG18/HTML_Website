@@ -1,0 +1,24 @@
+
+body
+{
+    background-image: url(../Image/fundal0.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+h2
+{
+    color: rgb(51, 238, 138,1);
+}
+h3
+{
+    color: rgb(246, 210, 4,1);
+}
+.text
+{
+    color: rgb(173, 248, 215);
+}
+
+
+
