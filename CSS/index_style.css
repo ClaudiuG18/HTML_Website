@@ -1,7 +1,8 @@
 
 body
 {
-    background-image: url(../Image/fundal0.jpg);
+    background-image: url(../Image/zimmer.png);
+   /* background-image: url(../Image/blue-fade.jpg);*/
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -13,12 +14,32 @@ h2
 }
 h3
 {
-    color: rgb(246, 210, 4,1);
+    color: rgb(51, 238, 138,1);
 }
 .text
 {
     color: rgb(173, 248, 215);
 }
+.icon
+{
+    width:20px;
+    height:20px;
+    margin-right: 10px;
+}
 
-
-
+.profilepic
+{
+    width: 100px;
+    height: auto;
+    border-radius: 10%;
+}
+.custom-padding
+{
+    padding-top: 30px;
+    padding-left: 400px;
+}
+.custom-link
+{
+    color:darkorange;
+    text-decoration: none;
+}
