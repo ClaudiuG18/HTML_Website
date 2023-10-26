@@ -27,19 +27,29 @@ h3
     margin-right: 10px;
 }
 
-.profilepic
+.profilePicture
 {
     width: 100px;
     height: auto;
-    border-radius: 10%;
+    border-radius:20px;
 }
 .custom-padding
 {
     padding-top: 30px;
     padding-left: 400px;
 }
+.customPad-2col
+{
+    padding-top: 30px;
+    padding-left:80px;
+}
 .custom-link
 {
     color:darkorange;
     text-decoration: none;
+}
+.carImg
+{
+    width: 250px;
+    height: 200px;
 }
