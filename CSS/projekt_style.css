@@ -1,7 +1,24 @@
 
 body
 {
-    background-image: url(../Image/Projects.png);
+    background-image: url(../Image/background0.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+}
+
+.ProjBtn
+{
+    
+    background-color: #4CAF50; /* Green background */
+    border: none;              /* Remove borders */
+    color: white;             /* White text */
+    padding: 15px 32px;        /* Some padding */
+    text-align: center;        /* Center the text */
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     /* Get block level display */
+    font-size: 16px;           /* Increase font size */
+    margin: 10px 4px;           /* Some margin */
+    cursor: pointer;           /* Pointer/hand icon on hover */
+    border-radius: 8px;        /* Rounded corners */
+    
 }
