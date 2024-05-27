@@ -5,8 +5,10 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #000;
+    background-image: url(../Image/arcade_bgnd.jpg);
 }
 
 canvas {
     border: 1px solid #fff;
+  
 }

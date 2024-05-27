@@ -5,6 +5,9 @@ const gridSize = 20;
 const canvasSize = canvas.width;
 const tileCount = canvasSize / gridSize;
 
+var image = new Image();
+image.src = '../Image/honeycomb_bgnd.png';
+
 let snake = [
     { x: gridSize * 5, y: gridSize * 5 },
     { x: gridSize * 4, y: gridSize * 5 },
@@ -21,6 +24,7 @@ let dy = 0;
 let score = 0;
 
 function drawGame() {
+
     moveSnake();
     if (isGameOver()) {
         return alert('Game Over');
@@ -35,7 +39,7 @@ function drawGame() {
 
 function clearCanvas() {
     ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, canvasSize, canvasSize);
+    ctx.drawImage(image,0, 0, canvasSize, canvasSize);
 }
 
 function drawSnake() {
