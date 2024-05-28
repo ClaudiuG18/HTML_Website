@@ -136,6 +136,8 @@ footer {
     flex-direction: column;
     text-align: center;
     padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     background-color: #2e2e2e; /* Anthrazit */
     color: #fff;
     position: fixed;
