@@ -45,26 +45,65 @@ section {
 }
 
 .profile {
-    text-align: center;
+    
+    display: flex;
+    flex-direction: row; /* Moves the image to the right */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #777676;
+}
+.title
+{
+    display: flex;
+    padding-left: 25em;
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #777676;
+}
+p {
+    font-size: 1.1em;
+    color: #797878;
+    line-height: 1.6;
+}
 .profile-pic {
-    width: 200px;
+    width: 150px;
     height: 250px;
     border-radius: 10%;
-    margin-bottom: 1em;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .carousel {
-    width: 80%;
+    width: 60%;
     margin-top: 2em;
 }
 
 .carousel img {
-    width: 30%;
+    width: 50%;
     border-radius: 10px;
 }
+a {
+    color: #75a4d3;
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
 .project {
     background-color: #ffffff;
     margin: 1em 0;
@@ -93,8 +132,10 @@ section {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 1em 0;
+    padding-left: 10px;
     background-color: #2e2e2e; /* Anthrazit */
     color: #fff;
     position: fixed;
@@ -109,4 +150,14 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+.github-logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.impressum-div
+{
+    padding-left: 10px;
 }
