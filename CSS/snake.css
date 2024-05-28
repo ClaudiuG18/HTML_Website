@@ -1,14 +1,30 @@
 body {
+    
+    background-image: url(../Image/background0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.game_window
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     margin: 0;
-    background-color: #000;
-    background-image: url(../Image/arcade_bgnd.jpg);
+}
+.start
+{
+    width: auto;
+    height: auto;
+    background-color: blueviolet;
+    color: aqua;
+    font-size: 30px;
+    margin: 0px 0px 0px 900px; 
 }
 
 canvas {
     border: 1px solid #fff;
+    background-image: url(../Image/Projects.png);
   
 }

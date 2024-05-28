@@ -1,12 +1,27 @@
 
 body
 {
-    background-image: url(../Image/zimmer.png);
+    background-image: url(../Image/background0.jpg);
    /* background-image: url(../Image/blue-fade.jpg);*/
     background-size:cover;
     background-repeat: no-repeat;
 }
 
+
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 1200px;
+}
+
+.flex-item
+{
+    display: block;
+    padding-top: 200px;
+   
+}
 
 h2
 {
@@ -22,34 +37,21 @@ h3
 }
 .icon
 {
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     margin-right: 10px;
 }
 
 .profilePicture
 {
-    width: 100px;
+    width: auto;
     height: auto;
     border-radius:20px;
 }
-.custom-padding
-{
-    padding-top: 30px;
-    padding-left: 400px;
-}
-.customPad-2col
-{
-    padding-top: 30px;
-    padding-left:80px;
-}
+
+
 .custom-link
 {
     color:darkorange;
     text-decoration: none;
-}
-.carImg
-{
-    width: 250px;
-    height: 200px;
 }
