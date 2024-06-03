@@ -114,8 +114,8 @@ footer a:hover {
 #controls {
     position: absolute;
     top: 420px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 30%;
+    
   }
   
   #controls button {
@@ -129,6 +129,7 @@ footer a:hover {
     position: absolute;
     left: -65px;
     top: 65px;
+    
   }
   
   #up {
@@ -143,7 +144,7 @@ footer a:hover {
   
   #right {
     position: absolute;
-    right: -65px;
+    right: -70px;
     top: 65px;
   }
 /*End buttons for mobile*/  
