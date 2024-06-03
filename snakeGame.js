@@ -123,5 +123,37 @@ function startClick() {
     }
   }
 
+  function mobileDirection(direction) {
+    const goingUp = dy === -gridSize;
+    const goingDown = dy === gridSize;
+    const goingRight = dx === gridSize;
+    const goingLeft = dx === -gridSize;
+
+    if (direction === 'LEFT' && !goingRight) {
+      dx = -gridSize;
+      dy = 0;
+    }
+
+    if (direction === 'UP' && !goingDown) {
+      dx = 0;
+      dy = -gridSize;
+    }
+
+    if (direction === 'RIGHT' && !goingLeft) {
+      dx = gridSize;
+      dy = 0;
+    }
+
+    if (direction === 'DOWN' && !goingUp) {
+      dx = 0;
+      dy = gridSize;
+    }
+  }
+
+  document.getElementById("left").addEventListener("click", () => mobileDirection('LEFT'));
+  document.getElementById("up").addEventListener("click", () => mobileDirection('UP'));
+  document.getElementById("down").addEventListener("click", () => mobileDirection('DOWN'));
+  document.getElementById("right").addEventListener("click", () => mobileDirection('RIGHT'));
+
   drawGame();
 }
