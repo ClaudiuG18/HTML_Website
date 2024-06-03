@@ -7,24 +7,7 @@ body {
     color: #333; /* Anthrazit */
 }
 
-.alignement{
-    display: flex;
-    flex-direction: column;
-}
-.left{
-    flex-basis: 50%;
-    padding-left: 1%;
-    border-style: solid;
-    border-color: rgb(241, 241, 241);
-    background-color: #dad5d5;
-}
-.right{
-    flex-basis: 50%;
-    padding-left: 5%;
-    border-style: solid;
-    border-color:rgb(241, 241, 241);
-    background-color: #dad5d5;
-}
+
 nav {
     background-color: #2e2e2e; /* Anthrazit */
     color: #fff;
