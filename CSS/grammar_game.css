@@ -7,6 +7,10 @@ body {
     color: #333; /* Anthrazit */
 }
 
+.main-body{
+    display:flexbox;
+    
+}
 
 nav {
     background-color: #2e2e2e; /* Anthrazit */

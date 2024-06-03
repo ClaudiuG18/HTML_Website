@@ -110,6 +110,49 @@ footer a:hover {
     height: auto;
 }
 
+/*Buttons for mobile*/
+#controls {
+    position: absolute;
+    top: 420px;
+    left: 30%;
+    
+  }
+  
+  #controls button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+  }
+  
+  #left {
+    position: absolute;
+    left: -65px;
+    top: 65px;
+    
+  }
+  
+  #up {
+    position: absolute;
+    top: 0;
+  }
+  
+  #down {
+    position: absolute;
+    top: 130px;
+  }
+  
+  #right {
+    position: absolute;
+    right: -70px;
+    top: 65px;
+  }
+/*End buttons for mobile*/  
+
+
+
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     nav ul {
