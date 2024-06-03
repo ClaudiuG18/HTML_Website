@@ -113,8 +113,8 @@ footer a:hover {
 /*Buttons for mobile*/
 #controls {
     position: absolute;
-    top: 420px;
-    left: 30%;
+    top: 550px;
+    left: 34%;
     
   }
   
@@ -123,6 +123,8 @@ footer a:hover {
     height: 60px;
     margin: 5px;
     font-size: 20px;
+    background-color: transparent;
+
   }
   
   #left {
@@ -144,7 +146,7 @@ footer a:hover {
   
   #right {
     position: absolute;
-    right: -70px;
+    right: -140px;
     top: 65px;
   }
 /*End buttons for mobile*/  
