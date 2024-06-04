@@ -93,19 +93,33 @@ function nextWord()  {
   return randomWord;
 }
 
+
 artikel = nextWord();
+
+function reload()
+{
+    location.reload(true);
+}
+
+function cacheReload()
+{
+    document.getElementById("variable_word").textContent = artikel;
+}
+
+
+
 
 function derClicked(){
 
     if (derArtikel.includes(artikel))
     {
-        alert("Korrekt");
-        location.reload(true);
+        document.getElementById("variable_word").textContent = "Korrekt";
+        setTimeout(reload, 2000);
     }
     else
     {
-        alert("Falsch!");
-        
+        document.getElementById("variable_word").textContent = "Falsch";
+        setTimeout(cacheReload,2000);
     }
    
     
@@ -114,12 +128,13 @@ function derClicked(){
 function dieClicked(){
     if (dieArtikel.includes(artikel))
     {
-        alert("Korrekt");
-        location.reload(true);
+        document.getElementById("variable_word").textContent = "Korrekt";
+        setTimeout(reload, 2000);
     }
     else
     {
-        alert("Falsch!");
+        document.getElementById("variable_word").textContent = "Falsch";
+        setTimeout(cacheReload,2000);
       
     }
  
@@ -129,13 +144,13 @@ function dasClicked(){
 
     if (dasArtikel.includes(artikel))
     {
-        alert("Korrekt");
-        location.reload(true);
+        document.getElementById("variable_word").textContent = "Korrekt";
+        setTimeout(reload, 2000);
     }
     else
     {
-        alert("Falsch!");
-  
+        document.getElementById("variable_word").textContent = "Falsch";
+        setTimeout(cacheReload,2000);
     }
 
 }
