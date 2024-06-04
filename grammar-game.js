@@ -79,6 +79,8 @@ const dasArtikel = [
 
 const comboArray = [derArtikel, dieArtikel, dasArtikel];
 var artikel;
+const points = 10;
+var score = 0;
 
 function getRandomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -94,12 +96,13 @@ function nextWord()  {
 }
 
 
-artikel = nextWord();
 
 function reload()
 {
-    location.reload(true);
+    artikel = nextWord()
+    return artikel;
 }
+
 
 function cacheReload()
 {
@@ -107,13 +110,15 @@ function cacheReload()
 }
 
 
-
+reload();
 
 function derClicked(){
 
     if (derArtikel.includes(artikel))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
+        score += points;
+        document.getElementById("scoreNumber").textContent = score; 
         setTimeout(reload, 2000);
     }
     else
@@ -129,6 +134,8 @@ function dieClicked(){
     if (dieArtikel.includes(artikel))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
+        score += points;
+        document.getElementById("scoreNumber").textContent = score;
         setTimeout(reload, 2000);
     }
     else
@@ -145,6 +152,8 @@ function dasClicked(){
     if (dasArtikel.includes(artikel))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
+        score += points;
+        document.getElementById("scoreNumber").textContent = score;
         setTimeout(reload, 2000);
     }
     else

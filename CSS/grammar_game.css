@@ -41,6 +41,18 @@ body {
     font-size: 20px;
 }
 
+#player{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
+
+#scoreNumber{
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}
+
 nav {
     background-color: #2e2e2e; /* Anthrazit */
     color: #fff;
