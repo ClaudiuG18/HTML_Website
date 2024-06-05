@@ -21,10 +21,18 @@ body {
     padding: 1em;
 }
 
-.word{
+.deword{
     display: flex;
     justify-content: center;
+    gap: 1%;
     background-color: yellow;
+}
+
+.roword{
+    display: flex;
+  
+    justify-content: center;
+    background-color: aqua;
 }
 
 #der{
