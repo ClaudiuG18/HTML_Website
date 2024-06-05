@@ -30,6 +30,34 @@ const derArtikel = [
     "Tänzer", "Autor", "Schriftsteller"
 ];
 
+const derRomanianWords = [
+    "bărbat", "copac", "masă", "scăun",
+    "câine", "măr", "calculator", "televizor",
+    "parc", "tren", "autobuz", "lingură",
+    "farfurie", "stilou", "scrisoare", "prieten",
+    "zi", "grădină", "munte", "râu",
+    "lac", "profesor", "elev", "doctor",
+    "brutar", "vânzător", "inginer", "artist",
+    "muzician", "actor", "polițist", "pompier",
+    "muncitor", "cercetător", "pilot", "căpitan",
+    "judecător", "avocat", "secretar", "fermier",
+    "preot", "jurnalist", "fotograf", "pictor",
+    "frizer", "croitor", "bucătar", "electrician",
+    "instalator", "tâmplar", "dulgher", "grădinar",
+    "administrator", "gunoier", "poștaș", "cizmar",
+    "mecanic auto", "optician", "farmacist", "dentist",
+    "veterinar", "psiholog", "terapeut", "contabil",
+    "bancher", "broker", "informatician", "student",
+    "pensionar", "pacient", "tată", "fiu",
+    "frate", "unchi", "bunicul", "soț",
+    "vecin", "coleg", "șef", "angajat",
+    "client", "oaspe", "vizitator", "turist",
+    "călător", "șofer", "pieton", "biciclist",
+    "matroz", "pasager", "doctor", "cântăreț",
+    "dansator", "autor", "scriitor"
+];
+
+
 const dieArtikel = [
     "Frau", "Katze", "Tasche", "Lampe", "Uhr", 
     "Tür", "Blume", "Straße", "Schule", "Universität", 
@@ -52,6 +80,36 @@ const dieArtikel = [
     "Therapeutin", "Buchhalterin", "Bankierin", "Maklerin", "Informatikerin", 
     "Patientin", "Kundin", "Gästin", "Leiterin", "Managerin", 
     "Direktorin", "Assistentin", "Trainerin", "Beraterin", "Entwicklerin"
+];
+
+const dieRomanianWords = [
+    "femeie", "pisică", "geantă", "lampă",
+    "ceas", "ușă", "floare", "stradă",
+    "școală", "universitate", "pod", "sticlă",
+    "perete", "bucătărie", "apartament", "ziar",
+    "revistă", "hartă", "bancă", "biserică",
+    "șoarece", "albină", "rață", "furculiță",
+    "ceașcă", "bol", "plantă", "trandafir",
+    "crin", "soare", "nor", "fulg de zăpadă",
+    "e-mail", "mesaj", "adresă", "număr",
+    "oraș", "capitală", "firmă", "atelier",
+    "industrie", "ramură", "producție", "societate",
+    "comunitate", "familie", "mamă", "fiică",
+    "soră", "bunică", "mătușă", "verișoară",
+    "prietena", "colegă", "angajată", "șefă",
+    "doctoriță", "profesoară", "elevă", "studentă",
+    "jurnalistă", "fotografă", "pictoriță", "cântăreață",
+    "dansatoare", "autoare", "scriitoare", "ghidă",
+    "călătoare", "vizitatoare", "turistă", "șoferiță",
+    "pietonă", "biciclistă", "polițistă", "pompieriță",
+    "brutăriță", "vânzătoare", "ingineră", "artistă",
+    "muziciană", "actriță", "cercetătoare", "pilotă",
+    "căpitană", "judecătoare", "avocată", "secretară",
+    "fermieriță", "preoteasă", "terapeută", "contabilă",
+    "bancheriță", "brokeriță", "informaticiană", "pacientă",
+    "clientă", "oaspete", "lideră", "manageră",
+    "directoare", "asistentă", "antrenoare", "consilieră",
+    "dezvoltatoare"
 ];
 
 const dasArtikel = [
@@ -77,20 +135,49 @@ const dasArtikel = [
     "Konzept", "Labor", "Mathematik", "Mittel", "Netzwerk"
 ];
 
+const dasRomanianWords = [
+    "casă", "mașină", "carte", "copil",
+    "animal", "bicicletă", "barcă", "avion",
+    "hotel", "restaurant", "mâncare", "băutură",
+    "imagine", "fereastră", "pat", "baie",
+    "cameră", "birou", "rochie", "cămașă",
+    "telefon", "radio", "cadou", "joc",
+    "cinema", "teatru", "muzeu", "festival",
+    "concert", "castel", "carte", "fată",
+    "bebeluş", "cuvânt", "problemă", "temă",
+    "program", "proiect", "produs", "rezultat",
+    "experiență", "succes", "interes", "sentiment",
+    "lumina", "pahar", "metal", "lemn",
+    "hârtie", "viață", "fericire", "nefericire",
+    "risc", "eveniment", "țel", "conversație",
+    "interviu", "interdicție", "lege", "drept",
+    "procedură", "antrenament", "eveniment", "proiect",
+    "concept", "laborator", "univers", "galaxie",
+    "sistem", "material", "unealtă", "dispozitiv",
+    "instrument", "câmp", "experiment", "fenomen",
+    "teoremă", "exemplu", "model", "semnal",
+    "simbol", "algoritm", "schemă", "temă",
+    "detaliu", "lucru", "eveniment", "rezultat",
+    "sentiment", "echilibru", "manual", "capitol",
+    "climă", "concept", "laborator", "matematică",
+    "mijloc", "rețea"
+];
+
+
 const comboArray = [derArtikel, dieArtikel, dasArtikel];
-var artikel;
 const points = 10;
 var score = 0;
+var deWord;
 
 function getRandomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
 function nextWord()  {
-
   const randomArrayIndex = Math.floor(Math.random() * comboArray.length);
   const randomArray = comboArray[randomArrayIndex];
   const randomWord = getRandomElement(randomArray);
+  const roWord = getRandomElement(randomArray);
   document.getElementById("variable_word").textContent = randomWord;
   return randomWord;
 }
@@ -99,14 +186,16 @@ function nextWord()  {
 
 function reload()
 {
-    artikel = nextWord()
-    return artikel;
+ de= nextWord();
+
+    return de;
 }
 
 
 function cacheReload()
 {
-    document.getElementById("variable_word").textContent = artikel;
+    document.getElementById("variable_word").textContent = de;
+    document.getElementById("roWord").textContent = ro;
 }
 
 
@@ -114,7 +203,7 @@ reload();
 
 function derClicked(){
 
-    if (derArtikel.includes(artikel))
+    if (derArtikel.includes(de))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
@@ -136,7 +225,7 @@ function derClicked(){
 }
 
 function dieClicked(){
-    if (dieArtikel.includes(artikel))
+    if (dieArtikel.includes(de))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
@@ -159,7 +248,7 @@ function dieClicked(){
 
 function dasClicked(){
 
-    if (dasArtikel.includes(artikel))
+    if (dasArtikel.includes(de))
     {
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
