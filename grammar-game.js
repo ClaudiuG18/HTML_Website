@@ -119,12 +119,17 @@ function derClicked(){
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
         document.getElementById("scoreNumber").textContent = score; 
-        setTimeout(reload, 2000);
+        setTimeout(reload, 1000);
     }
     else
     {
         document.getElementById("variable_word").textContent = "Falsch";
-        setTimeout(cacheReload,2000);
+        if(score > 0)
+            {
+                score -= points;
+                document.getElementById("scoreNumber").textContent = score;
+            }
+        setTimeout(cacheReload,1000);
     }
    
     
@@ -136,12 +141,17 @@ function dieClicked(){
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
         document.getElementById("scoreNumber").textContent = score;
-        setTimeout(reload, 2000);
+        setTimeout(reload, 1000);
     }
     else
     {
         document.getElementById("variable_word").textContent = "Falsch";
-        setTimeout(cacheReload,2000);
+        if(score > 0)
+            {
+                score -= points;
+                document.getElementById("scoreNumber").textContent = score;
+            }
+        setTimeout(cacheReload,1000);
       
     }
  
@@ -154,12 +164,17 @@ function dasClicked(){
         document.getElementById("variable_word").textContent = "Korrekt";
         score += points;
         document.getElementById("scoreNumber").textContent = score;
-        setTimeout(reload, 2000);
+        setTimeout(reload, 1000);
     }
     else
     {
         document.getElementById("variable_word").textContent = "Falsch";
-        setTimeout(cacheReload,2000);
+        if(score > 0)
+            {
+                score -= points;
+                document.getElementById("scoreNumber").textContent = score;
+            }
+        setTimeout(cacheReload,1000);
     }
 
 }
