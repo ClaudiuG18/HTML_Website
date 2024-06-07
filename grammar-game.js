@@ -109,102 +109,111 @@ const derArtikel = [
 ];
 
 const derRomanianWords = [
-  "bărbat",
-  "copac",
-  "masă",
-  "scaun",
-  "câine",
-  "măr",
-  "calculator",
-  "televizor",
-  "parc",
-  "tren",
-  "autobuz",
-  "lingură",
-  "farfurie",
-  "stilou",
-  "scrisoare",
-  "prieten",
-  "zi",
-  "grădină",
-  "munte",
-  "râu",
-  "lac",
-  "profesor",
-  "elev",
-  "doctor",
-  "brutar",
-  "vânzător",
-  "inginer",
-  "artist",
-  "muzician",
-  "actor",
-  "polițist",
-  "pompier",
-  "muncitor",
-  "cercetător",
-  "pilot",
-  "căpitan",
-  "judecător",
-  "avocat",
-  "secretar",
-  "fermier",
-  "preot",
-  "jurnalist",
-  "fotograf",
-  "pictor",
-  "frizer",
-  "croitor",
-  "bucătar",
-  "electrician",
-  "instalator",
-  "tâmplar",
-  "dulgher",
-  "grădinar",
-  "administrator",
-  "gunoier",
-  "poștaș",
-  "cizmar",
-  "mecanic auto",
-  "optician",
-  "farmacist",
-  "dentist",
-  "veterinar",
-  "psiholog",
-  "terapeut",
-  "contabil",
-  "bancher",
-  "broker",
-  "informatician",
-  "student",
-  "pensionar",
-  "pacient",
-  "tată",
-  "fiu",
-  "frate",
-  "unchi",
-  "bunicul",
-  "soț",
-  "vecin",
-  "coleg",
-  "șef",
-  "angajat",
-  "client",
-  "oaspe",
-  "vizitator",
-  "turist",
-  "călător",
-  "șofer",
-  "pieton",
-  "biciclist",
-  "marinar",
-  "pasager",
-  "doctor",
-  "cântăreț",
-  "dansator",
-  "autor",
-  "scriitor"
+  "bărbat",          // Mann
+  "copac",           // Baum
+  "masă",            // Tisch
+  "scaun",           // Stuhl
+  "câine",           // Hund
+  "măr",             // Apfel
+  "calculator",      // Computer
+  "televizor",       // Fernseher
+  "parc",            // Park
+  "tren",            // Zug
+  "autobuz",         // Bus
+  "lingură",         // Löffel
+  "farfurie",        // Teller
+  "stilou",          // Stift
+  "scrisoare",       // Brief
+  "prieten",         // Freund
+  "zi",              // Tag
+  "grădină",         // Garten
+  "munte",           // Berg
+  "râu",             // Fluss
+  "lac",             // See
+  "profesor",        // Lehrer
+  "elev",            // Schüler
+  "doctor",          // Arzt
+  "brutar",          // Bäcker
+  "vânzător",        // Verkäufer
+  "inginer",         // Ingenieur
+  "artist",          // Künstler
+  "muzician",        // Musiker
+  "actor",           // Schauspieler
+  "polițist",        // Polizist
+  "pompier",         // Feuerwehrmann
+  "muncitor",        // Bauarbeiter
+  "cercetător",      // Wissenschaftler
+  "pilot",           // Pilot
+  "căpitan",         // Kapitän
+  "judecător",       // Richter
+  "avocat",          // Anwalt
+  "secretar",        // Sekretär
+  "fermier",         // Landwirt
+  "preot",           // Pfarrer
+  "jurnalist",       // Journalist
+  "fotograf",        // Fotograf
+  "pictor",          // Maler
+  "frizer",          // Friseur
+  "croitor",         // Schneider
+  "bucătar",         // Koch
+  "electrician",     // Elektriker
+  "instalator",      // Installateur
+  "tâmplar",         // Tischler
+  "dulgher",         // Zimmermann
+  "grădinar",        // Gärtner
+  "administrator",   // Hausmeister
+  "gunoier",         // Müllmann
+  "poștaș",          // Briefträger
+  "cizmar",          // Schuster
+  "mecanic auto",    // Automechaniker
+  "optician",        // Optiker
+  "farmacist",       // Apotheker
+  "dentist",         // Zahnarzt
+  "veterinar",       // Tierarzt
+  "psiholog",        // Psychologe
+  "terapeut",        // Therapeut
+  "contabil",        // Buchhalter
+  "bancher",         // Bankier
+  "broker",          // Makler
+  "informatician",   // Informatiker
+  "student",         // Student
+  "elev",            // Schüler (duplicate)
+  "pensionar",       // Rentner
+  "pacient",         // Patient
+  "prieten",         // Freund (duplicate)
+  "tată",            // Vater
+  "fiu",             // Sohn
+  "frate",           // Bruder
+  "unchi",           // Onkel
+  "bunicul",         // Großvater
+  "soț",             // Ehemann
+  "vecin",           // Nachbar
+  "coleg",           // Kollege
+  "șef",             // Chef
+  "angajat",         // Mitarbeiter
+  "client",          // Kunde
+  "oaspete",         // Gast
+  "vizitator",       // Besucher
+  "turist",          // Tourist
+  "călător",         // Reisende
+  "șofer",           // Autofahrer
+  "pieton",          // Fußgänger
+  "biciclist",       // Radfahrer
+  "pilot",           // Pilot (duplicate)
+  "căpitan",         // Kapitän (duplicate)
+  "marinar",         // Matrose
+  "pasager",         // Passagier
+  "student",         // Student (duplicate)
+  "profesor",        // Lehrer (duplicate)
+  "profesor",        // Professor
+  "doctor",          // Doktor
+  "pacient",         // Patient (duplicate)
+  "cântăreț",        // Sänger
+  "dansator",        // Tänzer
+  "autor",           // Autor
+  "scriitor"         // Schriftsteller
 ];
+
 
 const dieArtikel = [
   "Frau",
@@ -315,112 +324,113 @@ const dieArtikel = [
 ];
 
 const dieRomanianWords = [
-  "femeie",
-  "pisică",
-  "geantă",
-  "lampă",
-  "ceas",
-  "ușă",
-  "floare",
-  "stradă",
-  "școală",
-  "universitate",
-  "pod",
-  "sticlă",
-  "perete",
-  "bucătărie",
-  "apartament",
-  "ziar",
-  "revistă",
-  "hartă",
-  "bancă",
-  "biserică",
-  "șoarece",
-  "albină",
-  "rață",
-  "furculiță",
-  "ceașcă",
-  "bol",
-  "plantă",
-  "trandafir",
-  "crin",
-  "soare",
-  "nor",
-  "fulg de zăpadă",
-  "e-mail",
-  "mesaj",
-  "adresă",
-  "număr",
-  "oraș",
-  "capitală",
-  "firmă",
-  "atelier",
-  "industrie",
-  "ramură",
-  "producție",
-  "societate",
-  "comunitate",
-  "familie",
-  "mamă",
-  "fiică",
-  "soră",
-  "bunică",
-  "mătușă",
-  "verișoară",
-  "prietenă",
-  "colegă",
-  "angajată",
-  "șefă",
-  "doctoriță",
-  "profesoară",
-  "elevă",
-  "studentă",
-  "jurnalistă",
-  "fotografă",
-  "pictoriță",
-  "cântăreață",
-  "dansatoare",
-  "autoare",
-  "scriitoare",
-  "ghid",
-  "călătoare",
-  "vizitatoare",
-  "turistă",
-  "șoferiță",
-  "pieton",
-  "biciclistă",
-  "polițistă",
-  "pompier",
-  "brutăriță",
-  "vânzătoare",
-  "inginer (femeie)",
-  "artistă",
-  "muzician(femeie)",
-  "actriță",
-  "cercetătoare",
-  "pilot(femeie)",
-  "căpitan(femeie)",
-  "judecătoare",
-  "avocată",
-  "secretară",
-  "fermieriță",
-  "preoteasă",
-  "terapeută",
-  "contabilă",
-  "bancheriță",
-  "brokeriță",
-  "informaticiană",
-  "pacientă",
-  "clientă",
-  "oaspete",
-  "lideră",
-  "manageră",
-  "directoare",
-  "asistentă",
-  "antrenoare",
-  "consilieră",
-  "dezvoltatoare"
+  "femeie",           // Frau
+  "pisică",           // Katze
+  "geantă",           // Tasche
+  "lampă",            // Lampe
+  "ceas",             // Uhr
+  "ușă",              // Tür
+  "floare",           // Blume
+  "stradă",           // Straße
+  "școală",           // Schule
+  "universitate",     // Universität
+  "pod",              // Brücke
+  "sticlă",           // Flasche
+  "perete",           // Wand
+  "bucătărie",        // Küche
+  "apartament",       // Wohnung
+  "ziar",             // Zeitung
+  "revistă",          // Zeitschrift
+  "hartă",            // Karte
+  "bancă",            // Bank
+  "biserică",         // Kirche
+  "șoarece",          // Maus
+  "albină",           // Biene
+  "rață",             // Ente
+  "furculiță",        // Gabel
+  "ceașcă",           // Tasse
+  "bol",              // Schüssel
+  "plantă",           // Pflanze
+  "trandafir",        // Rose
+  "crin",             // Lilie
+  "soare",            // Sonne
+  "nor",              // Wolke
+  "fulg de zăpadă",   // Schneeflocke
+  "e-mail",           // E-Mail
+  "mesaj",            // Nachricht
+  "adresă",           // Adresse
+  "număr",            // Nummer
+  "oraș",             // Stadt
+  "capitală",         // Hauptstadt
+  "firmă",            // Firma
+  "atelier",          // Werkstatt
+  "industrie",        // Industrie
+  "ramură",           // Branche
+  "producție",        // Produktion
+  "societate",        // Gesellschaft
+  "comunitate",       // Gemeinschaft
+  "familie",          // Familie
+  "mamă",             // Mutter
+  "fiică",            // Tochter
+  "soră",             // Schwester
+  "bunică",           // Großmutter
+  "mătușă",           // Tante
+  "verișoară",        // Cousine
+  "prietenă",         // Freundin
+  "colegă",           // Kollegin
+  "angajată",         // Mitarbeiterin
+  "șefă",             // Chefin
+  "doctoriță",        // Ärztin
+  "profesoară",       // Lehrerin
+  "elevă",            // Schülerin
+  "studentă",         // Studentin
+  "jurnalistă",       // Journalistin
+  "fotografă",        // Fotografin
+  "pictoriță",        // Malerin
+  "cântăreață",       // Sängerin
+  "dansatoare",       // Tänzerin
+  "autoare",          // Autorin
+  "scriitoare",       // Schriftstellerin
+  "ghid",             // Reiseleiterin
+  "călătoare",        // Reisende
+  "vizitatoare",      // Besucherin
+  "turistă",          // Touristin
+  "șoferiță",         // Fahrerin
+  "pieton",          // Fußgängerin
+  "biciclistă",       // Radfahrerin
+  "polițistă",        // Polizistin
+  "pompier",          // Feuerwehrfrau
+  "brutăriță",        // Bäckerin
+  "vânzătoare",       // Verkäuferin
+  "inginer (femeie)", // Ingenieurin
+  "artistă",          // Künstlerin
+  "muzician(femeie)", // Musikerin
+  "actriță",          // Schauspielerin
+  "cercetătoare",     // Wissenschaftlerin
+  "pilot(femeie)",    // Pilotin
+  "căpitan(femeie)",  // Kapitänin
+  "judecătoare",      // Richterin
+  "avocată",          // Anwältin
+  "secretară",        // Sekretärin
+  "fermieriță",       // Landwirtin
+  "preoteasă",        // Pfarrerin
+  "terapeută",        // Therapeutin
+  "contabilă",        // Buchhalterin
+  "bancheriță",       // Bankierin
+  "brokeriță",        // Maklerin
+  "informaticiană",   // Informatikerin
+  "pacientă",         // Patientin
+  "clientă",          // Kundin
+  "oaspete",          // Gästin
+  "lideră",           // Leiterin
+  "manageră",         // Managerin
+  "directoare",       // Direktorin
+  "asistentă",        // Assistentin
+  "antrenoare",       // Trainerin
+  "consilieră",       // Beraterin
+  "dezvoltatoare"     // Entwicklerin
 ];
+
 
 const dasArtikel = [
   "Haus",
