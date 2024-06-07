@@ -432,209 +432,192 @@ const dieRomanianWords = [
 ];
 
 
+
 const dasArtikel = [
-  "Haus",
-  "Auto",
-  "Buch",
-  "Kind",
-  "Tier",
-  "Fahrrad",
-  "Boot",
-  "Flugzeug",
-  "Hotel",
-  "Restaurant",
-  "Essen",
-  "Getränk",
-  "Bild",
-  "Fenster",
-  "Bett",
-  "Bad",
-  "Zimmer",
-  "Büro",
-  "Kleid",
-  "Hemd",
-  "Telefon",
-  "Radio",
-  "Geschenk",
-  "Spiel",
-  "Kino",
-  "Theater",
-  "Museum",
-  "Festival",
-  "Konzert",
-  "Schloss",
-  "Buch",
-  "Mädchen",
-  "Baby",
-  "Wort",
-  "Problem",
-  "Thema",
-  "Programm",
-  "Projekt",
-  "Produkt",
-  "Ergebnis",
-  "Erlebnis",
-  "Erfolg",
-  "Interesse",
-  "Gefühl",
-  "Licht",
-  "Glas",
-  "Metall",
-  "Holz",
-  "Papier",
-  "Leben",
-  "Glück",
-  "Unglück",
-  "Risiko",
-  "Ereignis",
-  "Ziel",
-  "Erlebnis",
-  "Gespräch",
-  "Interview",
-  "Verbot",
-  "Gesetz",
-  "Recht",
-  "Verfahren",
-  "Training",
-  "Ereignis",
-  "Projekt",
-  "Konzept",
-  "Labor",
-  "Universum",
-  "Galaxy",
-  "System",
-  "Material",
-  "Werkzeug",
-  "Gerät",
-  "Instrument",
-  "Feld",
-  "Experiment",
-  "Erlebnis",
-  "Phänomen",
-  "Theorem",
-  "Beispiel",
-  "Modell",
-  "Signal",
-  "Symbol",
-  "Algorithmus",
-  "Schema",
-  "Thema",
-  "Detail",
-  "Ding",
-  "Ereignis",
-  "Ergebnis",
-  "Gefühl",
-  "Gleichgewicht",
-  "Handbuch",
-  "Kapitel",
-  "Klima",
-  "Konzept",
-  "Labor",
-  "Mathematik",
-  "Mittel",
-  "Netzwerk"
+  "Haus",             // casă
+  "Auto",             // mașină
+  "Buch",             // carte
+  "Kind",             // copil
+  "Tier",             // animal
+  "Fahrrad",          // bicicletă
+  "Boot",             // barcă
+  "Flugzeug",         // avion
+  "Hotel",            // hotel
+  "Restaurant",       // restaurant
+  "Essen",            // mâncare
+  "Getränk",          // băutură
+  "Bild",             // imagine
+  "Fenster",          // fereastră
+  "Bett",             // pat
+  "Bad",              // baie
+  "Zimmer",           // cameră
+  "Büro",             // birou
+  "Kleid",            // rochie
+  "Hemd",             // cămașă
+  "Telefon",          // telefon
+  "Radio",            // radio
+  "Geschenk",         // cadou
+  "Spiel",            // joc
+  "Kino",             // cinema
+  "Theater",          // teatru
+  "Museum",           // muzeu
+  "Festival",         // festival
+  "Konzert",          // concert
+  "Schloss",          // castel
+  "Mädchen",          // fată
+  "Baby",             // bebeluş
+  "Wort",             // cuvânt
+  "Problem",          // problemă
+  "Thema",            // temă
+  "Programm",         // program
+  "Projekt",          // proiect
+  "Produkt",          // produs
+  "Ergebnis",         // rezultat
+  "Erlebnis",         // experiență
+  "Erfolg",           // succes
+  "Interesse",        // interes
+  "Gefühl",           // sentiment
+  "Licht",            // lumina
+  "Glas",             // pahar
+  "Metall",           // metal
+  "Holz",             // lemn
+  "Papier",           // hârtie
+  "Leben",            // viață
+  "Glück",            // fericire
+  "Unglück",          // nefericire
+  "Risiko",           // risc
+  "Ereignis",         // eveniment
+  "Ziel",             // țel
+  "Gespräch",         // conversație
+  "Interview",        // interviu
+  "Verbot",           // interdicție
+  "Gesetz",           // lege
+  "Recht",            // drept
+  "Verfahren",        // procedură
+  "Training",         // antrenament
+  "Konzept",          // concept
+  "Labor",            // laborator
+  "Universum",        // univers
+  "Galaxie",          // galaxie
+  "System",           // sistem
+  "Material",         // material
+  "Werkzeug",         // unealtă
+  "Gerät",            // dispozitiv
+  "Instrument",       // instrument
+  "Feld",             // câmp
+  "Experiment",       // experiment
+  "Phänomen",         // fenomen
+  "Theorem",          // teoremă
+  "Beispiel",         // exemplu
+  "Modell",           // model
+  "Signal",           // semnal
+  "Symbol",           // simbol
+  "Algorithmus",      // algoritm
+  "Schema",           // schemă
+  "Detail",           // detaliu
+  "Ding",             // lucru
+  "Gleichgewicht",    // echilibru
+  "Handbuch",         // manual
+  "Kapitel",          // capitol
+  "Klima",            // climă
+  "Mathematik",       // matematică
+  "Mittel",           // mijloc
+  "Netzwerk"          // rețea
 ];
 
 const dasRomanianWords = [
-  "casă",
-  "mașină",
-  "carte",
-  "copil",
-  "animal",
-  "bicicletă",
-  "barcă",
-  "avion",
-  "hotel",
-  "restaurant",
-  "mâncare",
-  "băutură",
-  "imagine",
-  "fereastră",
-  "pat",
-  "baie",
-  "cameră",
-  "birou",
-  "rochie",
-  "cămașă",
-  "telefon",
-  "radio",
-  "cadou",
-  "joc",
-  "cinema",
-  "teatru",
-  "muzeu",
-  "festival",
-  "concert",
-  "castel",
-  "carte",
-  "fată",
-  "bebeluş",
-  "cuvânt",
-  "problemă",
-  "temă",
-  "program",
-  "proiect",
-  "produs",
-  "rezultat",
-  "experiență",
-  "succes",
-  "interes",
-  "sentiment",
-  "lumina",
-  "pahar",
-  "metal",
-  "lemn",
-  "hârtie",
-  "viață",
-  "fericire",
-  "nefericire",
-  "risc",
-  "eveniment",
-  "țel",
-  "conversație",
-  "interviu",
-  "interdicție",
-  "lege",
-  "drept",
-  "procedură",
-  "antrenament",
-  "eveniment",
-  "proiect",
-  "concept",
-  "laborator",
-  "univers",
-  "galaxie",
-  "sistem",
-  "material",
-  "unealtă",
-  "dispozitiv",
-  "instrument",
-  "câmp",
-  "experiment",
-  "fenomen",
-  "teoremă",
-  "exemplu",
-  "model",
-  "semnal",
-  "simbol",
-  "algoritm",
-  "schemă",
-  "temă",
-  "detaliu",
-  "lucru",
-  "eveniment",
-  "rezultat",
-  "sentiment",
-  "echilibru",
-  "manual",
-  "capitol",
-  "climă",
-  "concept",
-  "laborator",
-  "matematică",
-  "mijloc",
-  "rețea"
+  "casă",             // Haus
+  "mașină",           // Auto
+  "carte",            // Buch
+  "copil",            // Kind
+  "animal",           // Tier
+  "bicicletă",        // Fahrrad
+  "barcă",            // Boot
+  "avion",            // Flugzeug
+  "hotel",            // Hotel
+  "restaurant",       // Restaurant
+  "mâncare",          // Essen
+  "băutură",          // Getränk
+  "imagine",          // Bild
+  "fereastră",        // Fenster
+  "pat",              // Bett
+  "baie",             // Bad
+  "cameră",           // Zimmer
+  "birou",            // Büro
+  "rochie",           // Kleid
+  "cămașă",           // Hemd
+  "telefon",          // Telefon
+  "radio",            // Radio
+  "cadou",            // Geschenk
+  "joc",              // Spiel
+  "cinema",           // Kino
+  "teatru",           // Theater
+  "muzeu",            // Museum
+  "festival",         // Festival
+  "concert",          // Konzert
+  "castel",           // Schloss
+  "fată",             // Mädchen
+  "bebeluş",          // Baby
+  "cuvânt",           // Wort
+  "problemă",         // Problem
+  "temă",             // Thema
+  "program",          // Programm
+  "proiect",          // Projekt
+  "produs",           // Produkt
+  "rezultat",         // Ergebnis
+  "experiență",       // Erlebnis
+  "succes",           // Erfolg
+  "interes",          // Interesse
+  "sentiment",        // Gefühl
+  "lumina",           // Licht
+  "pahar",            // Glas
+  "metal",            // Metall
+  "lemn",             // Holz
+  "hârtie",           // Papier
+  "viață",            // Leben
+  "fericire",         // Glück
+  "nefericire",       // Unglück
+  "risc",             // Risiko
+  "eveniment",        // Ereignis
+  "țel",              // Ziel
+  "conversație",      // Gespräch
+  "interviu",         // Interview
+  "interdicție",      // Verbot
+  "lege",             // Gesetz
+  "drept",            // Recht
+  "procedură",        // Verfahren
+  "antrenament",      // Training
+  "concept",          // Konzept
+  "laborator",        // Labor
+  "univers",          // Universum
+  "galaxie",          // Galaxie
+  "sistem",           // System
+  "material",         // Material
+  "unealtă",          // Werkzeug
+  "dispozitiv",       // Gerät
+  "instrument",       // Instrument
+  "câmp",             // Feld
+  "experiment",       // Experiment
+  "fenomen",          // Phänomen
+  "teoremă",          // Theorem
+  "exemplu",          // Beispiel
+  "model",            // Modell
+  "semnal",           // Signal
+  "simbol",           // Symbol
+  "algoritm",         // Algorithmus
+  "schemă",           // Schema
+  "detaliu",          // Detail
+  "lucru",            // Ding
+  "echilibru",        // Gleichgewicht
+  "manual",           // Handbuch
+  "capitol",          // Kapitel
+  "climă",            // Klima
+  "matematică",       // Mathematik
+  "mijloc",           // Mittel
+  "rețea"             // Netzwerk
 ];
+
+
 
 //variables 
 const comboArray = [derArtikel, dieArtikel, dasArtikel];
