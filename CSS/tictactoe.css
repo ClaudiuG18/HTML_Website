@@ -6,10 +6,9 @@ body {
     box-sizing: border-box;
     color: #333; /* Anthrazit */
 }
-
-nav {
+.navbar{
     background-color: #2e2e2e; /* Anthrazit */
-    color: #fff;
+    color: #6b6b6b;
     padding: 1em 0;
 }
 
@@ -33,38 +32,6 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.start-btn {
-    width: 100px;
-    height: 30px;
-    background-color: #2e2e2e;
-    color: #fff;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.start-btn:hover {
-    background-color: #585656;
-}
-
-canvas {
-    border: 2px solid #2e2e2e;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100%;
-    max-width: 100%;
-    height: auto;
 }
 
 footer {
@@ -154,4 +121,54 @@ footer a:hover {
     .contact-div a, .impressum-div a {
         font-size: 14px;
     }
+}
+
+
+
+.game-board {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.game-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #484747;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.game-info {
+    margin-top: 20px;
+    text-align: center;
+    color: aqua;
+}
+
+#restart-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }
