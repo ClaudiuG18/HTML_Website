@@ -1,0 +1,10 @@
+{
+    "name": "Control_Poarta",
+    "short_name": "Poarta",
+    "theme_color": "#2196f3",
+    "background_color": "#2e5b7e",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }
