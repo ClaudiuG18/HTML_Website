@@ -40,6 +40,7 @@ $(".open").click(function () {
   }, 1000); // Update every second
 });
 
+/*
 document.addEventListener("DOMContentLoaded", function() {
     function sendCommand(command) {
       fetch(command)
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
     };
 
-  */
+  
 
 
     window.turnOnRelay = function() {
@@ -69,4 +70,4 @@ document.addEventListener("DOMContentLoaded", function() {
       sendCommand("https://pi.claudiu-ghise.de/relayoff");
     };
   });
-  
+  */
