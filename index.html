@@ -10,18 +10,17 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
-    <h1 class="title">Welcome to my website!</h1>
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML/projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <section id="home">
-        <div class="profile">
-            <img src="/Image/claudiu_elegant2.png" alt="Profilbild" class="profile-pic">
-
+    <div class="intro">
+        <div class="intro-text">
             <p>
                 My name is Claudiu Ghise, and I'm a <strong>software developer</strong>. I completed my vocational
                 training at a German company in Schwabach and
@@ -32,18 +31,13 @@
                 </strong>
                 gathering experience with C++, C#, WPF, SQL and Python.
             </p>
-
         </div>
-        <div class="carousel">
-            <div><img src="/Image/PasswordManager1.png" alt="Bild 1"></div>
-            <div><img src="/Image/PasswordManager2.png" alt="Bild 2"></div>
-            <div><img src="/Image/PasswordManager3.png" alt="Bild 3"></div>
-            <div><img src="/Image/snake_game1.png" alt="Bild 3"></div>
-            <!-- Weitere Bilder hinzufügen -->
+        <div class="profile-pic">
+            <img src="Image/claudiu_elegant2.png" alt="Profile pic">
         </div>
-    </section>
+    </div>
 
-    <footer>
+    <footer class="footer">
         <div class="contact-div">
             <a href="https://github.com/ClaudiuG18" target="_blank"><img src="/Image/github.png" alt="GitHub Logo"
                     class="github-logo">GitHub</a>
@@ -52,24 +46,7 @@
             <a href="impressum.html">Impressum | </a>&copy; 2024 Claudiu Ghise. Alle Rechte vorbehalten.
         </div>
     </footer>
-
-    <!-- Slick Carousel JS -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 1500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2500
-            });
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
 </html>
