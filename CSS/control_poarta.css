@@ -46,8 +46,11 @@ body {
     color: rgb(13, 30, 30);
     cursor: pointer;
     transition: transform 0.2s ease;
-    
     box-shadow: 0 5px 10px rgba(77, 99, 88, 0.6);
+}
+.btn-inchide:active
+{
+    transform: scale(0.95);
 }
 
 nav {

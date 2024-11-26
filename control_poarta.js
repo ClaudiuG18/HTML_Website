@@ -8,13 +8,21 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error("Error:", error));
     }
   
-    window.turnOnRelay = function() {
+   /* window.turnOnRelay = function() {
       sendCommand("https://pi.claudiu-ghise.de/relayon");  
       setTimeout(function() {
         sendCommand("https://pi.claudiu-ghise.de/relayoff");
     }, 5000);
+       
     };
-  
+
+  */
+
+
+    window.turnOnRelay = function() {
+      sendCommand("https://pi.claudiu-ghise.de/relayon");  
+       
+    };
     window.turnOffRelay = function() {
       sendCommand("https://pi.claudiu-ghise.de/relayoff");
     };
