@@ -10,7 +10,7 @@
         
     </head>
     <body>
-        <!-- Navigation bar -->
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -18,16 +18,19 @@
         </ul>
     </nav>
     <!-- Nav bar end -->
-    <p>Time <span>5</span>seconds</p> 
-    <div class="center">
-        <button class="btn-deschide" onclick="turnOnRelay()">Deschide_Poarta</button>
-        
-    </div>
-    
-    <div class="center">
-        <button class="btn-inchide" onclick="turnOffRelay()">Inchide_Poarta</button>
-    </div>
-        
+    <div class="title">
+        <p>Poarta</p>
+      </div>
+      <div class="btn">
+        <button class="close">Inchide</button>
+        <button class="open">Deschide</button>
+      </div>
+      <h1 class="not"></h1>
+      <h1 class="timer"></h1>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <script src="/control_poarta.js"></script>
+   
     </body>
 
   
@@ -39,7 +42,4 @@
         <a href="impressum.html">Impressum | </a>&copy; 2024 Claudiu Ghise. Alle Rechte vorbehalten.
         </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/control_poarta.js"></script>
 </html>
