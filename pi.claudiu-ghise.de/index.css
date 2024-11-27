@@ -1,16 +1,16 @@
 /* Global Styles */
 body {
-  background-color: rgba(44, 42, 41, 0.854);
+  background-color: rgba(6, 37, 43, 0.854);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
 .title {
-  font-size: 8vw; /* Responsive font size based on viewport width */
+  font-size: 10vw; /* Responsive font size based on viewport width */
   font-weight: bold;
   text-align: center;
-  color: #0dff52;
+  color: #660dff;
   margin-top: 20px;
 }
 
@@ -19,10 +19,8 @@ body {
   height: 15vh; /* Height based on viewport height for better scaling */
   width: 40vw; /* Width based on viewport width */
   font-size: 5vw; /* Font size based on viewport width */
-  background-color: rgba(0, 255, 234, 0.184);
   border: 0;
-  border-radius: 25px;
-  box-shadow: 0 0 30px rgba(31, 75, 1, 0.6);
+  border-radius: 50px;
   transition: transform 0.1s, box-shadow 0.1s;
   display: block;
   margin: 0 auto;
@@ -30,12 +28,16 @@ body {
 
 /* Adding margin to the buttons to create space */
 .open {
-  color: rgb(119, 255, 0);
+  color: rgb(255, 247, 0);
+  background-color: rgb(65, 167, 79);
+  box-shadow: 0 0 30px rgba(95, 220, 114, 0.3);
   margin-bottom: 5vh; /* Space between open and close buttons */
 }
 
 .close {
-  color: rgb(139, 33, 33);
+  color: rgb(255, 247, 0);
+  background-color: rgb(174, 67, 67);
+  box-shadow: 0 0 30px rgba(187, 49, 49, 0.3);
 }
 
 .open:active,
@@ -64,7 +66,7 @@ body {
 .progress-bar {
   display: block;
   margin: 10px auto;
-  width: 25%;
+  width: 25lvh;
   height: 20px;
   background: #e0e0e0;
   border-radius: 10px;
@@ -76,7 +78,7 @@ body {
   width: 0%; /* Adjust percentage */
   height: 100%;
   background: #3498db;
-  transition: width 3s ease-in-out;
+  transition: width 2s ease-in-out;
 }
 
 /* Media Query for Mobile Devices */
@@ -88,7 +90,7 @@ body {
   .open,
   .close {
     height: 12vh; /* Reduce button height for mobile */
-    width: 80vw; /* Make buttons take up more width */
+    width: 50vw; /* Make buttons take up more width */
     font-size: 6vw; /* Scale button font size for smaller screens */
     margin-bottom: 8vw; /* Increase space between buttons */
   }
