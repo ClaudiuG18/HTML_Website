@@ -25,6 +25,9 @@ $(".close").click(function () {
   $(".close").prop("disabled", true);
   $(".open").prop("disabled", true);
   turnOffRelay();
+  $(".progress").css("transition", "width 3s ease-in-out");
+  // Animate the progress bar
+  $(".progress").animate({ width: "100%" }); // Animate over 'seconds'
   let timer = setInterval(function () {
     seconds--;
     if (seconds > 0) {
@@ -35,6 +38,7 @@ $(".close").click(function () {
       $(".not").text("");
       $(".close").prop("disabled", false);
       $(".open").prop("disabled", false);
+      $(".progress").css("transition", "none").css("width", "0%");
     }
   }, 1000); // Update every second
 });
@@ -46,6 +50,9 @@ $(".open").click(function () {
   $(".open").prop("disabled", true);
   $(".close").prop("disabled", true);
   turnOnRelay();
+  // Animate the progress bar
+  $(".progress").css("transition", "width 3s ease-in-out");
+  $(".progress").animate({ width: "100%" }); // Animate over 'seconds'
   let timer = setInterval(function () {
     seconds--;
     if (seconds > 0) {
@@ -56,6 +63,7 @@ $(".open").click(function () {
       $(".not").text("");
       $(".open").prop("disabled", false);
       $(".close").prop("disabled", false);
+      $(".progress").css("transition", "none").css("width", "0%");
     }
   }, 1000); // Update every second
 });
