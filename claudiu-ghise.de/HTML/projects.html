@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Portfolio</title>
-    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/projects.css">
 </head>
+
 <body>
-    <nav>
+    <div class="nav-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
-    </nav>
+    </div>
+    <main>
+        <div class=project id="1">
+            <h1>Projects</h1>
+            <p>Below, you will see a few of my recent projects: </p>
+        </div>
 
-    <section id="projects">
-        <h1>Projects</h1>
-        <p>Below you will see a few of my recent projects: </p>
-        <div class="project">
+        <div class="project" id="2">
             <h2><a href="snake.html">Snake</a> </h2>
             <p>A simple Snake game in JS. You can try it out by clicking on the Snake word!</p>
         </div>
-        <div class="project">
+        <div class="project" id="3">
             <h2><a href="tictactoe.html">TiTacToe</a> </h2>
             <p>TicTacToe Game (I know it doesnt make sense in plaiying alone :P)</p>
         </div>
-        <div class="project">
+        <div class="project" id="4">
             <h2> <a href="grammar_game.html">Grammar game</a> </h2>
             <p>Practice the German article!</p>
         </div>
-        <div class="project">
+        <div class="project" id="5">
             <h2> <a href="password_manager.html">Password manager</a> </h2>
             <p>A password manager build using WPF and SQLite</p>
         </div>
-        <div class="project">
-            <h2> <a href="control_poarta.html">Control poarta ESP8266</a> </h2>
-        </div>
-     
-        <!-- Weitere Projekte können hier hinzugefügt werden -->
+    </main>
+
+
+    <!-- Weitere Projekte können hier hinzugefügt werden -->
     </section>
-    <footer>
-        <div class="contact-div">
-            <a href="https://github.com/ClaudiuG18" target="_blank"><img src="/Image/github.png" alt="GitHub Logo" class="github-logo">GitHub</a>
+    <footer class="footer">
+        <div class="git-logo">
+            <img src="/Image/github.png" alt="GitHub Logo">
         </div>
-        <div class="impressum-div">
-        <a href="impressum.html">Impressum | </a>&copy; 2024 Claudiu Ghise. Alle Rechte vorbehalten.
+        <div class="git-link">
+            <a href="https://github.com/ClaudiuG18">GitHub</a>
+        </div>
+        <div class="impress-div">
+            <a href="/HTML/impressum.html">| Impressum </a>
         </div>
     </footer>
 </body>
+
 </html>

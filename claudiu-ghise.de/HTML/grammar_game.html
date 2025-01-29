@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password manager</title>
     <link rel="stylesheet" href="/CSS/grammar_game.css">
-
 </head>
 
 <body>
 
     <!-- Navigation bar -->
-    <nav>
+    <div class="nav-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
-    </nav>
+
+    </div>
     <!-- Nav bar end -->
 
     <!-- Content -->
     <div class="title">
-        <div><h1>Artikel</h1></div>
+        <div>
+            <h1>Artikel</h1>
+        </div>
     </div>
 
     <div id="player">
-        <div id="score"><h3>Score: <p id="scoreNumber"></p> </h3></div>
+        <div id="score">
+            <h3>Score: <p id="scoreNumber"></p>
+            </h3>
+        </div>
     </div>
 
     <div class="deword">
-        <div><h2 id="variable_word"> </h2></div>
+        <div>
+            <h2 id="variable_word"> </h2>
+        </div>
     </div>
 
     <div class="roword">
-        <div><h2 id="roWord"></h2></div>
+        <div>
+            <h2 id="roWord"></h2>
+        </div>
     </div>
 
     <div class="btn">
@@ -48,18 +55,20 @@
 
 
     <!-- Footer-->
-    <footer>
-        <div class="contact-div">
-            <a href="https://github.com/ClaudiuG18" target="_blank"><img src="/Image/github.png" alt="GitHub Logo"
-                    class="github-logo">GitHub</a>
+    <footer class="footer">
+        <div class="git-logo">
+            <img src="/Image/github.png" alt="GitHub Logo">
         </div>
-        <div class="impressum-div">
-            <a href="impressum.html">Impressum | </a>&copy; 2024 Claudiu Ghise. Alle Rechte vorbehalten.
+        <div class="git-link">
+            <a href="https://github.com/ClaudiuG18">GitHub</a>
+        </div>
+        <div class="impress-div">
+            <a href="/HTML/impressum.html">| Impressum </a>
         </div>
     </footer>
     <!-- Footer end -->
 
-<script src="/grammar-game.js"></script>
+    <script src="/grammar-game.js"></script>
 </body>
 
 </html>

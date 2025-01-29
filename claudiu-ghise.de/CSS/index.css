@@ -1,87 +1,55 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
+.container {
+  display: grid;
+  grid-template-columns: minmax(50px, auto);
+  grid-template-rows: auto;
+  border: 3px solid rgb(145, 8, 224);
 }
-body {
-  background-color: rgb(63, 75, 83);
-  display: flex;
-  flex-direction: column;
+.navbar {
+  border: 3px solid rgb(109, 139, 20);
 }
-main {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  padding: 20px;
-}
-.impressum {
-  flex-grow: 1;
-  color: aliceblue;
-  padding: 1%;
-}
-.intro-text {
-  flex: 1; /* Take available space */
-  max-width: 60%; /* Optional: Limit width of text */
-  font-size: 120%;
-  color: aqua;
-  background-color: rgb(44, 42, 40);
-  border-radius: 10px;
-  padding: 1%;
-  box-shadow: 0 0 30px rgba(61, 65, 65, 0.539);
-}
+.navbar ul {
+  display: grid;
+  grid-template-columns: minmax(20px, 12fr) minmax(10px, 1fr) minmax(10px, 1fr);
+  margin-right: 2%;
+  justify-items: end;
 
-.profile-pic {
-  flex: 0 0 auto; /* Fix size of the image container */
-  margin-left: 20px; /* Add space between text and image */
-}
-
-.profile-pic img {
-  width: 100%; /* Adjust as needed */
-  max-width: 200px; /* Set a max width for the image */
-  border-radius: 10%; /* Keep this styling */
-}
-.nav-bar ul {
-  display: flex;
-  justify-content: center;
   list-style: none;
-  background-color: rgb(51, 55, 58);
-  border-radius: 10px;
-  column-gap: 10%;
+  font-size: x-large;
 }
-.nav-bar a {
+
+.navbar ul li a {
   text-decoration: none;
-  color: aliceblue;
+  color: black;
+}
+.navbar ul li a:hover {
+  color: rgb(115, 21, 203);
 }
 
-.nav-bar a:hover {
-  text-shadow: 0 0 10px rgba(192, 180, 180, 0.395);
-}
-
-footer {
-  align-self: flex-end;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgb(51, 55, 58);
-  column-gap: 10px;
-  border-radius: 10px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: aliceblue;
-}
-
-.git-logo img {
+.my-name {
   margin-right: auto;
-  min-width: 10px;
-  min-height: 10px;
-  max-width: 20px;
-  max-height: 20px;
+}
+
+/* Picture */
+.pic-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: 3px solid rgb(5, 47, 255);
+}
+.pic img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.introtxt {
+  border: 3px solid rgb(238, 226, 13);
+}
+
+.galery {
+  border: 3px solid rgb(6, 227, 243);
+}
+
+.footer {
+  border: 3px solid rgb(107, 233, 3);
 }
