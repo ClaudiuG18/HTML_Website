@@ -9,41 +9,47 @@
 </head>
 
 <body>
-    <div class="nav-bar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </div>
-    <main>
-        <div class=project id="1">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="/Image/Claudiu_Ghise_100x40.png"></div>
+        <div class="nav-buttons">
+            <a href="/index.html" class="nav-btn">Home</a>
+            <a href="/HTML/projects.html" class="nav-btn">Projects</a>
+        </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    </nav>
+    <!--NAVBAR END-->
+    <div class="main">
+        <div class=project>
             <h1>Projects</h1>
             <p>Below, you will see my recent projects</p>
         </div>
-        <div class="project" id="4">
+        <div class="project">
             <h2> <a href="grammar_game.html">Grammar game</a> </h2>
             <p>Practice the German - Romanian article!</p>
         </div>
-        <div class="project" id="5">
+        <div class="project">
             <h2> <a href="password_manager.html">Password manager</a> </h2>
             <p>A password manager build using C# WPF and SQLite</p>
         </div>
-    </main>
+    </div>
 
+    <!-- Footer -->
+    <div class="footer">
 
-    <!-- Weitere Projekte können hier hinzugefügt werden -->
-    </section>
-    <footer class="footer">
         <div class="git-logo">
             <img src="/Image/github.png" alt="GitHub Logo">
         </div>
         <div class="git-link">
-            <a href="https://github.com/ClaudiuG18">GitHub</a>
+            <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
         </div>
         <div class="impress-div">
-            <a href="/HTML/impressum.html">| Impressum </a>
+            <a href="HTML/impressum.html" class="footer-link">Impressum</a>
         </div>
-    </footer>
+    </div>
+    <!--FOOTER END-->
+
+    <script src="/JS/hamburger_btn.js"></script>
 </body>
 
 </html>
