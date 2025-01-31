@@ -10,56 +10,84 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="Image/Claudiu_Ghise_100x40.png"></div>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="HTML/projects.html" class="nav-btn">Projects</a>
+        </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    </nav>
+    <!--NAVBAR END-->
 
-    <main class="container">
-        <div class="navbar">
-            <ul>
-                <li class="my-name">Claudiu Ghi&#537;e</li>
-                <li><a href="index.html">Home |</a></li>
-                <li><a href="HTML/projects.html">Projects</a>
-                <li>
-            </ul>
-        </div>
-        <div class="pic-container">
-            <div class="pic">
-                <img src="Image/selfie2.jpg" alt="Profile pic">
-            </div>
-            <div class="introtext">
-                <p>
-                    My name is Claudiu Ghise, and I'm a <strong>software developer</strong>. I completed my vocational
-                    training at a German company in Schwabach and
-                    <strong>
-                        <a href="https://www.bsz-roth.de/berufsfachschule-fuer-informatik/die-ausbildung/"
-                            target="_blank">Staatliches Berufsfachschule für Informatik Roth,
-                        </a>
-                    </strong>
-                    gathering experience with C++, C#, WPF, SQL and Python.
-                </p>
-            </div>
 
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="profile-pic">
+            <img src="Image/selfie2.jpg" alt="Profile pic">
         </div>
-        <div class="galery">
-            <ul class="cards">
-                <li>1</li>
-                <li>2</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+        <div class="introtext">
+            <p>
+                My name is Claudiu Ghise, and I'm a <strong>software developer</strong>. I completed my
+                vocational
+                training at a German company in Schwabach and
+                <strong>
+                    <a href="https://www.bsz-roth.de/berufsfachschule-fuer-informatik/die-ausbildung/"
+                        target="_blank">Staatliches Berufsfachschule für Informatik Roth,
+                    </a>
+                </strong>
+                gathering experience with C++, C#, WPF, SQL, CAPL, Java Script, HTML, CSS, Microsoft Powerapps and
+                Embedded Systems like Arduino, STM-32 and Raspberry Pi. In fact this website is hosted on a Raspberry Pi
+                4 using NGINX.
+            </p>
         </div>
-        <div class="footer">
-            <div class="git-logo">
-                <img src="/Image/github.png" alt="GitHub Logo">
-            </div>
-            <div class="git-link">
-                <a href="https://github.com/ClaudiuG18">GitHub</a>
-            </div>
-            <div class="impress-div">
-                <a href="HTML/impressum.html">| Impressum </a>
-            </div>
+
+    </div>
+    <!--MAIN CONTENT END-->
+
+    <!-- Cards -->
+    <div class="cards-container">
+        <div class="card">
+            <img src="Image/password_manager_pic1.png" alt="Card Image 1">
+            <h3>Password manager</h3>
+            <p>A C# - WPF - SQLite project.</p>
         </div>
-    </main>
+        <div class="card">
+            <img src="Image/raspberry.jpg" alt="Card Image 2">
+            <h3>Raspberry Pi4 </h3>
+            <p> Website hosted on thise Pi4. </p>
+        </div>
+        <div class="card">
+            <img src="Image/arduino+esp32.jpg" alt="Card Image 3">
+            <h3>Arduino Nano and ESP32 </h3>
+            <p> Boards used for a progressive web app project.</p>
+        </div>
+        <div class="card">
+            <img src="Image/HTML_Website.png" alt="Card Image 3">
+            <h3>HTML</h3>
+            <p> A sample of my HTML code.</p>
+        </div>
+    </div>
+    <!--CARDS END-->
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <div class="git-logo">
+            <img src="/Image/github.png" alt="GitHub Logo">
+        </div>
+        <div class="git-link">
+            <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
+        </div>
+        <div class="impress-div">
+            <a href="HTML/impressum.html" class="footer-link">Impressum</a>
+        </div>
+    </div>
+    <!--FOOTER END-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS/hamburger_btn.js"></script>
 </body>
 
 </html>

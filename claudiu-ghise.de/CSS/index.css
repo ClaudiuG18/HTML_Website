@@ -1,55 +1,263 @@
-.container {
-  display: grid;
-  grid-template-columns: minmax(50px, auto);
-  grid-template-rows: auto;
-  border: 3px solid rgb(145, 8, 224);
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
+/* Base Navbar Styling */
 .navbar {
-  border: 3px solid rgb(109, 139, 20);
-}
-.navbar ul {
-  display: grid;
-  grid-template-columns: minmax(20px, 12fr) minmax(10px, 1fr) minmax(10px, 1fr);
-  margin-right: 2%;
-  justify-items: end;
-
-  list-style: none;
-  font-size: x-large;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 20px;
 }
 
-.navbar ul li a {
+/* Logo */
+
+/* Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  padding-left: 40%; /* Push buttons to the right */
+}
+
+/* Button Styling */
+.nav-btn {
+  color: white;
   text-decoration: none;
-  color: black;
-}
-.navbar ul li a:hover {
-  color: rgb(115, 21, 203);
-}
-
-.my-name {
-  margin-right: auto;
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-/* Picture */
-.pic-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border: 3px solid rgb(5, 47, 255);
-}
-.pic img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+.nav-btn:hover {
+  background-color: #777;
 }
 
-.introtxt {
-  border: 3px solid rgb(238, 226, 13);
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
-.galery {
-  border: 3px solid rgb(6, 227, 243);
+/* Let main content expand */
+.main-content {
+  flex: 1; /* Pushes the footer down */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #222;
+  color: white;
+  text-align: left;
 }
 
+/* Profile Picture */
+.profile-pic img {
+  width: 150px;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* 📱 Responsive: Mobile Styles */
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* Hidden initially */
+    padding-left: 0%;
+  }
+
+  .menu-toggle {
+    display: block; /* Show on mobile */
+  }
+
+  /* Show menu when clicked */
+  .nav-buttons.show {
+    display: flex;
+  }
+}
+
+/* Footer Styling */
 .footer {
-  border: 3px solid rgb(107, 233, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+/* GitHub Logo Styling */
+.git-logo img {
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Footer Links */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.footer-link:hover {
+  background-color: #777;
+}
+
+/* 📱 Responsive: Center Everything on Mobile */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Profile Picture */
+.profile-pic img {
+  width: 150px; /* Adjust as needed */
+  height: 180px;
+  border-radius: 30%;
+  border: 3px solid #555;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.1);
+}
+
+/* Text Content */
+.introtext {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Styled Links */
+.introtext a {
+  color: #00bcd4; /* Light blue for contrast */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.introtext a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+/* 📱 Responsive: Stack on Small Screens */
+@media (max-width: 600px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Card Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #222; /* Matches the main content */
+}
+
+/* Individual Card */
+.card {
+  width: 250px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Add a fade-in animation when the page loads */
+.card {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(20px); /* Start from below */
+  animation: fadeInUp 0.5s ease forwards; /* Fade and move up */
+  animation-delay: 0.2s; /* Delay the animation slightly */
+}
+
+/* Keyframes for fade-in-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add delays for each card to make them appear sequentially */
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Image Styling */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Title */
+.card h3 {
+  margin: 10px 0;
+}
+
+/* Description */
+.card p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 📱 Responsive: Stack on Smaller Screens */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
