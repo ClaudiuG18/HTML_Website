@@ -5,49 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum - Portfolio</title>
-    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/impressum.css">
 </head>
 
 <body>
-    <div class="nav-bar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="/HTML/projects.html">Projects</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="/Image/Claudiu_Ghise_100x40.png"></div>
+        <div class="nav-buttons">
+            <a href="/index.html" class="nav-btn">Home</a>
+            <a href="/HTML/projects.html" class="nav-btn">Projects</a>
+        </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    </nav>
+    <!--NAVBAR END-->
+
+    <!-- Main content -->
+    <div class="impressum">
+        <div class="impressum-text">
+            <h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG:</p>
+            <p>
+                Claudiu Ghise<br>
+                Windsbacher Straße 27<br>
+                91174 Spalt<br>
+            </p>
+            <p>
+                <strong>Kontakt:</strong><br>
+                Telefon: +49 1746881261<br>
+                E-Mail: claudiughise@gmail.com<br>
+            </p>
+            <p>
+                <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+                Claudiu Ghise<br>
+                Windsbacher Straße 27<br>
+                91174 Spalt<br>
+            </p>
+        </div>
+
     </div>
+    <!--MAIN CONTENT END-->
 
-    <section class="impressum">
-        <h1>Impressum</h1>
-        <p>Angaben gemäß § 5 TMG:</p>
-        <p>
-            Claudiu Ghise<br>
-            Windsbacher Straße 27<br>
-            91174 Spalt<br>
-        </p>
-        <p>
-            <strong>Kontakt:</strong><br>
-            Telefon: +49 1746881261<br>
-            E-Mail: claudiughise@gmail.com<br>
-        </p>
-        <p>
-            <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-            Claudiu Ghise<br>
-            Windsbacher Straße 27<br>
-            91174 Spalt<br>
-        </p>
-    </section>
+    <!-- Footer -->
+    <div class="footer">
 
-    <footer class="footer">
         <div class="git-logo">
             <img src="/Image/github.png" alt="GitHub Logo">
         </div>
         <div class="git-link">
-            <a href="https://github.com/ClaudiuG18">GitHub</a>
+            <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
         </div>
         <div class="impress-div">
-            <a href="impressum.html">| Impressum </a>
+            <a href="/HTML/impressum.html" class="footer-link">Impressum</a>
         </div>
-    </footer>
+    </div>
+    <!--FOOTER END-->
+
+    <script src="/JS/hamburger_btn.js"></script>
 </body>
 
 </html>

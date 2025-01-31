@@ -1,0 +1,108 @@
+/* Ensure the page takes up the full height of the viewport */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Base Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 20px;
+}
+
+/* Logo */
+
+/* Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  padding-left: 40%; /* Push buttons to the right */
+}
+
+/* Button Styling */
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #777;
+}
+
+/* Hamburger Menu (hidden by default, shown on mobile) */
+.menu-toggle {
+  display: none; /* Initially hidden */
+  font-size: 30px;
+  color: white;
+}
+
+/* 📱 Responsive: Mobile Styles */
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* Hidden initially */
+    padding-left: 0%;
+  }
+
+  .menu-toggle {
+    display: block; /* Show on mobile */
+  }
+
+  /* Show menu when clicked */
+  .nav-buttons.show {
+    display: flex;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  gap: 15px;
+}
+.footer-link:hover {
+  background-color: #777;
+}
+
+/* Footer Links */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.impressum {
+  flex: 1; /* Pushes the footer down */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #222;
+  color: white;
+  text-align: left;
+}
+.impressum-text {
+  font-size: 1rem;
+}
