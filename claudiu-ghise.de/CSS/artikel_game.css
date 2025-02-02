@@ -13,6 +13,25 @@ html {
   background-color: #333;
   padding: 5px 20px;
 }
+/* Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  padding-left: 40%; /* Push buttons to the right */
+}
+/* Button Styling */
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #777;
+}
 
 /* Mobile Menu Button */
 .menu-toggle {
@@ -23,7 +42,7 @@ html {
 }
 
 /* 📱 Responsive: Mobile Styles */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -100,34 +119,6 @@ html {
   height: 50px;
 }
 
-/* Buttons Container */
-.nav-buttons {
-  display: flex;
-  gap: 15px; /* Space between buttons */
-  padding-left: 42vw; /* Push buttons to the right */
-}
-
-/* Button Styling */
-.nav-btn {
-  color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  background-color: #555;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.nav-btn:hover {
-  background-color: #777;
-}
-
-/* Mobile Menu Button */
-.menu-toggle {
-  display: none; /* Hidden on desktop */
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
 /* Footer Styling */
 .footer {
   display: flex;
@@ -157,7 +148,7 @@ html {
   background-color: #777;
 }
 /* 📱 Responsive: Center Everything on Mobile */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .footer {
     flex-direction: column;
     gap: 10px;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password manager</title>
-    <link rel="stylesheet" href="/CSS/gram-game.css">
+    <link rel="stylesheet" href="/CSS/artikel_game.css">
 </head>
 
 <body>
@@ -74,7 +74,18 @@
 
 
     <script src="/JS/grammar-game.js"></script>
-    <script src="/JS/hamburger_btn.js"></script>
+    <script>
+        // Get the hamburger menu and the nav-buttons container
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navButtons = document.querySelector('.nav-buttons');
+
+        // Add a click event listener to the hamburger menu
+        menuToggle.addEventListener('click', () => {
+            // Toggle the 'show' class on the nav-buttons container
+            navButtons.classList.toggle('show');
+        });
+    </script>
 </body>
+
 
 </html>
