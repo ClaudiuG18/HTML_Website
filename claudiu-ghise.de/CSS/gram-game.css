@@ -1,0 +1,175 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Base Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 20px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 Responsive: Mobile Styles */
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* Hidden initially */
+    padding-left: 0%;
+  }
+
+  .menu-toggle {
+    display: block; /* Show on mobile */
+  }
+
+  /* Show menu when clicked */
+  .nav-buttons.show {
+    display: flex;
+  }
+}
+
+.main-content {
+  flex: 1; /* Pushes the footer down */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #222;
+  color: white;
+  text-align: left;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  gap: 15px;
+}
+.btn #der:hover {
+  background-color: #777;
+}
+.btn #die:hover {
+  background-color: #777;
+}
+.btn #das:hover {
+  background-color: #777;
+}
+.btn #der {
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+  color: white;
+  width: 100px;
+  height: 50px;
+}
+.btn #die {
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+  color: white;
+  width: 100px;
+  height: 50px;
+}
+.btn #das {
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+  color: white;
+  width: 100px;
+  height: 50px;
+}
+
+/* Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  padding-left: 42vw; /* Push buttons to the right */
+}
+
+/* Button Styling */
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #777;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+/* GitHub Logo Styling */
+.git-logo img {
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Footer Links */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.footer-link:hover {
+  background-color: #777;
+}
+/* 📱 Responsive: Center Everything on Mobile */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+#score h2 {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+#scoreNumber {
+  display: inline-block; /* Makes the <p> element inline */
+  margin-left: 5px; /* Optional: Adds some space between "Score:" and the number */
+}

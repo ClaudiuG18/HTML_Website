@@ -1,74 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password manager</title>
-    <link rel="stylesheet" href="/CSS/grammar_game.css">
+    <link rel="stylesheet" href="/CSS/gram-game.css">
 </head>
 
 <body>
-
-    <!-- Navigation bar -->
-    <div class="nav-bar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-
-    </div>
-    <!-- Nav bar end -->
-
-    <!-- Content -->
-    <div class="title">
-        <div>
-            <h1>Artikel</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="/Image/Claudiu_Ghise_100x40.png"></div>
+        <div class="nav-buttons">
+            <a href="/index.html" class="nav-btn">Home</a>
+            <a href="/HTML/projects.html" class="nav-btn">Projects</a>
         </div>
-    </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    </nav>
+    <!--NAVBAR END-->
 
-    <div id="player">
-        <div id="score">
-            <h3>Score: <p id="scoreNumber"></p>
-            </h3>
+    <!-- MAin Content -->
+    <div class="main-content">
+        <div class="title">
+            <div>
+                <h1>Artikel</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="deword">
-        <div>
-            <h2 id="variable_word"> </h2>
+        <div id="player">
+            <div id="score">
+                <h2>Score: <p id="scoreNumber">0</p>
+                </h2>
+            </div>
         </div>
-    </div>
 
-    <div class="roword">
-        <div>
-            <h2 id="roWord"></h2>
+        <div class="deword">
+            <div>
+                <h2 id="variable_word"> </h2>
+            </div>
         </div>
+
+        <div class="roword">
+            <div>
+                <h2 id="roWord"></h2>
+            </div>
+        </div>
+
+        <div class="btn">
+            <div><button id="der">Der</button></div>
+            <div><button id="die">Die</button></div>
+            <div><button id="das">Das</button></div>
+        </div>
+        <!-- Content End-->
+
     </div>
+    <!--MAIN CONTENT END-->
 
-    <div class="btn">
-        <div><button id="der">Der</button></div>
-        <div><button id="die">Die</button></div>
-        <div><button id="das">Das</button></div>
-    </div>
-    <!-- Content End-->
+    <!-- Footer -->
+    <div class="footer">
 
-
-    <!-- Footer-->
-    <footer class="footer">
         <div class="git-logo">
             <img src="/Image/github.png" alt="GitHub Logo">
         </div>
         <div class="git-link">
-            <a href="https://github.com/ClaudiuG18">GitHub</a>
+            <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
         </div>
         <div class="impress-div">
-            <a href="/HTML/impressum.html">| Impressum </a>
+            <a href="/HTML/impressum.html" class="footer-link">Impressum</a>
         </div>
-    </footer>
-    <!-- Footer end -->
+    </div>
+    <!--FOOTER END-->
 
-    <script src="/grammar-game.js"></script>
+
+    <script src="/JS/grammar-game.js"></script>
+    <script src="/JS/hamburger_btn.js"></script>
 </body>
 
 </html>
