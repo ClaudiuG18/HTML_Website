@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.9.0/nipplejs.min.js"></script>
+</head>
+
+<body>
+  <div id="joystickZone" style="width: 200px; height: 200px; margin: auto; background-color: blueviolet;"></div>
+  <script>
+    var ws = new WebSocket("wss://claudiu-ghise.de/ws");
+    var joystick = nipplejs.create({ zone: document.getElementById('joystickZone'), mode: 'dynamic' });
+
+    joystick.on('move', function (evt, data) {
+      let x = Math.round(data.vector.x * 100);
+      let y = Math.round(data.vector.y * -100);
+      ws.send(x + "," + y);
+    });
+  </script>
+</body>
+
+
+</html>

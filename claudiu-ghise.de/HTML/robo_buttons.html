@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/robo.css">
+  <title>Servo Control Panel</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="controls-row">
+      <!-- Servo A Controls -->
+      <div class="servo-control">
+        <h3>Servo A</h3>
+        <button class="control-btn" id="sAPlus">+</button>
+        <div>
+          <span class="angle-display" id="sAAngle">135</span>&deg;
+        </div>
+        <button class="control-btn" id="sAMinus">-</button>
+      </div>
+
+      <!-- Servo B Controls -->
+      <div class="servo-control">
+        <h3>Servo B</h3>
+        <button class="control-btn" id="sBPlus">+</button>
+        <div>
+          <span class="angle-display" id="sBAngle">135</span>&deg;
+        </div>
+        <button class="control-btn" id="sBMinus">-</button>
+      </div>
+    </div>
+
+    <div class="utility-row">
+      <div class="increment-control">
+        <label for="incrementRate">Step Size:</label>
+        <input type="number" id="incrementRate" value="1" min="1" max="100">
+      </div>
+      <button id="resetBtn">Reset to Center</button>
+    </div>
+  </div>
+
+  <!-- Keep the same JavaScript as previous version -->
+  <script src="/JS/robo_with_buttons.js">
+    // Your existing JavaScript code here
+  </script>
+</body>
+
+</html>
