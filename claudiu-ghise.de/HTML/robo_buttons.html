@@ -4,47 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/robo.css">
+  <link rel="stylesheet" href="/CSS/index.css">
   <title>Servo Control Panel</title>
 </head>
 
 <body>
-  <div class="main-container">
-    <div class="controls-row">
-      <!-- Servo A Controls -->
-      <div class="servo-control">
-        <h3>Servo A</h3>
-        <button class="control-btn" id="sAPlus">+</button>
-        <div>
-          <span class="angle-display" id="sAAngle">135</span>&deg;
-        </div>
-        <button class="control-btn" id="sAMinus">-</button>
-      </div>
-
-      <!-- Servo B Controls -->
-      <div class="servo-control">
-        <h3>Servo B</h3>
-        <button class="control-btn" id="sBPlus">+</button>
-        <div>
-          <span class="angle-display" id="sBAngle">135</span>&deg;
-        </div>
-        <button class="control-btn" id="sBMinus">-</button>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="/Image/Claudiu_Ghise_100x40.png"></div>
+    <div class="nav-buttons">
+      <a href="/index.html" class="nav-btn">Home</a>
+      <a href="/HTML/projects.html" class="nav-btn">Projects</a>
     </div>
+    <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+  </nav>
+  <!--NAVBAR END-->
 
-    <div class="utility-row">
-      <div class="increment-control">
-        <label for="incrementRate">Step Size:</label>
-        <input type="number" id="incrementRate" value="1" min="1" max="100">
-      </div>
-      <button id="resetBtn">Reset to Center</button>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <h1>Robot project presentation</h1>
+
+  </div>
+  <!--MAIN CONTENT END-->
+
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="git-logo">
+      <img src="/Image/github.png" alt="GitHub Logo">
+    </div>
+    <div class="git-link">
+      <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
+    </div>
+    <div class="impress-div">
+      <a href="HTML/impressum.html" class="footer-link">Impressum</a>
     </div>
   </div>
+  <!--FOOTER END-->
 
-  <!-- Keep the same JavaScript as previous version -->
-  <script src="/JS/robo_with_buttons.js">
-    // Your existing JavaScript code here
-  </script>
+  <script src="/JS/hamburger_btn.js"></script>
 </body>
 
 </html>
