@@ -7,7 +7,7 @@ self.addEventListener("install", function (e) {
         "/",
         "/index.html",
         "/JS/robo_with_buttons.js",
-        "/CSS/styles.css",
+        "/CSS/robo.css",
         "/icon512_maskable.png",
         "/icon512_rounded.png",
       ]);
@@ -22,7 +22,11 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
+      if (response) {
+        return response;
+      } else {
+        return fetch(e.request);
+      }
     })
   );
 });

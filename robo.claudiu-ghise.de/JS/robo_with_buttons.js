@@ -8,9 +8,7 @@ const MIN_ANGLE = 15;
 const MAX_ANGLE = 255;
 const SINGLE_CLICK_DELAY = 150; // Milliseconds before single click registers
 const HOLD_DELAY = 300; // Milliseconds before hold starts repeating
-navigator.serviceWorker.register("/sw.js").then(() => {
-  console.log("Service Worker registered");
-});
+
 // Get increment rate input
 const incrementInput = document.getElementById("incrementRate");
 
