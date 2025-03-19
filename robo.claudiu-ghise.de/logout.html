@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Logout</title>
+  <script>
+    // Clear credentials and redirect
+    localStorage.removeItem('ws_username');
+    localStorage.removeItem('ws_password');
+    window.location.href = '/login.html';
+  </script>
+</head>
+
+<body>
+  Logging out...
+</body>
+
+</html>

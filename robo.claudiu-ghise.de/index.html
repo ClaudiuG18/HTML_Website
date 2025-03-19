@@ -1,62 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/CSS/robo.css">
   <link rel="manifest" href="manifest.json">
-  <title>Servo Control Panel</title>
+
+  <title>Robotic Arm Control</title>
 </head>
 
 <body>
-  <div class="main-container">
-    <div class="controls-row">
-      <!-- Servo A Controls -->
-      <div class="servo-control">
-        <h3>Servo A</h3>
-        <button class="control-btn" id="sAPlus">+</button>
-        <div>
-          <span class="angle-display" id="sAAngle">135</span>&deg;
-        </div>
-        <button class="control-btn" id="sAMinus">-</button>
-      </div>
+  <h1>Robotic Arm Control</h1>
 
-      <!-- Servo B Controls -->
-      <div class="servo-control">
-        <h3>Servo B</h3>
-        <button class="control-btn" id="sBPlus">+</button>
-        <div>
-          <span class="angle-display" id="sBAngle">135</span>&deg;
-        </div>
-        <button class="control-btn" id="sBMinus">-</button>
-      </div>
+  <div>
+    <label>Base:</label>
+    <input type="range" min="0" max="270" value="60" class="slider" id="servo1">
+    <span class="status" id="servo1Val">60°</span>
+  </div>
+  <div>
+    <label>Axe A:</label>
+    <input type="range" min="50" max="230" value="150" class="slider" id="servo2">
+    <span class="status" id="servo2Val">150°</span>
+  </div>
+  <div>
+    <label>Axe B:</label>
+    <input type="range" min="50" max="270" value="90" class="slider" id="servo3">
+    <span class="status" id="servo3Val">90°</span>
+  </div>
+  <div>
+    <label>Axe C:</label>
+    <input type="range" min="0" max="270" value="90" class="slider" id="servo4">
+    <span class="status" id="servo4Val">90°</span>
+  </div>
+  <div>
+    <label>Gripper:</label>
+    <input type="range" min="85" max="175" value="90" class="slider" id="gripper">
+    <span class="status" id="gripperVal">90°</span>
+  </div>
+  <div>
+    <label>Speed (Delay):</label>
+    <input type="range" min="1" max="50" value="10" class="slider" id="stepDelay">
+    <span class="status" id="stepDelayVal">10ms</span>
+  </div>
+  <div>
+    <label>Step Size:</label>
+    <input type="range" min="1" max="10" value="3" class="slider" id="stepSize">
+    <span class="status" id="stepSizeVal">3µs</span>
+  </div>
+
+  <div>
+    <textarea name="code" id="textarea"
+      placeholder="Enter commands here: in form servo1:40;&#10servo1 -> Base&#10servo5 -> Gripper"></textarea>
+  </div>
+  <div class="buttons">
+    <div class="buttonRun">
+      <button id="run">Run</button>
     </div>
-
-    <div class="utility-row">
-      <div class="increment-control">
-        <label for="incrementRate">Step Size:</label>
-        <input type="number" id="incrementRate" value="1" min="1" max="100">
-      </div>
-      <button id="resetBtn">Reset to Center</button>
+    <div class="buttonReset">
+      <button id="reset">Reset</button>
     </div>
   </div>
 
-  <script src="/JS/robo_with_buttons.js"></script>
-  <script>if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("Service Worker registered with scope:", registration.scope);
-        })
-        .catch((error) => {
-          console.error("Service Worker registration failed:", error);
-        });
-    } else {
-      console.error("Service Worker is not supported in this browser.");
-    }
-  </script>
-
+  <script src="/JS/robo.js"></script>
 </body>
 
 </html>
