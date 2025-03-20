@@ -14,22 +14,22 @@
   <h1>Robotic Arm Control</h1>
 
   <div>
-    <label>Base:</label>
+    <label>Base: </label>
     <input type="range" min="0" max="270" value="60" class="slider" id="servo1">
     <span class="status" id="servo1Val">60°</span>
   </div>
   <div>
-    <label>Axe A:</label>
+    <label>Axe A: </label>
     <input type="range" min="50" max="230" value="150" class="slider" id="servo2">
     <span class="status" id="servo2Val">150°</span>
   </div>
   <div>
-    <label>Axe B:</label>
-    <input type="range" min="50" max="270" value="90" class="slider" id="servo3">
+    <label>Axe B: </label>
+    <input type="range" min="10" max="270" value="90" class="slider" id="servo3">
     <span class="status" id="servo3Val">90°</span>
   </div>
   <div>
-    <label>Axe C:</label>
+    <label>Axe C: </label>
     <input type="range" min="0" max="270" value="90" class="slider" id="servo4">
     <span class="status" id="servo4Val">90°</span>
   </div>
@@ -39,19 +39,19 @@
     <span class="status" id="gripperVal">90°</span>
   </div>
   <div>
-    <label>Speed (Delay):</label>
-    <input type="range" min="1" max="50" value="10" class="slider" id="stepDelay">
+    <label>Speed:</label>
+    <input type="range" min="1" max="500" value="10" class="slider" id="stepDelay">
     <span class="status" id="stepDelayVal">10ms</span>
   </div>
   <div>
-    <label>Step Size:</label>
+    <label>Step:</label>
     <input type="range" min="1" max="10" value="3" class="slider" id="stepSize">
     <span class="status" id="stepSizeVal">3µs</span>
   </div>
 
   <div>
     <textarea name="code" id="textarea"
-      placeholder="Enter commands here: in form servo1:40;&#10servo1 -> Base&#10servo5 -> Gripper"></textarea>
+      placeholder="Enter commands here: in form&#10servo1:40;&#10servo1 -> Base&#10servo5 -> Gripper"></textarea>
   </div>
   <div class="buttons">
     <div class="buttonRun">
@@ -60,6 +60,11 @@
     <div class="buttonReset">
       <button id="reset">Reset</button>
     </div>
+  </div>
+  <div>
+    <label for="checkbox">
+      <input type="checkbox" id="loop">Loop
+    </label>
   </div>
 
   <script src="/JS/robo.js"></script>

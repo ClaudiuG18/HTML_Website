@@ -1,4 +1,5 @@
 ws = new WebSocket(`wss.robo.claudiu-ghise.de/ws`);
+let isCheckbox = false;
 
 // Update angle display and send command
 function updateServo(id, angle) {
@@ -56,6 +57,14 @@ document.getElementById("reset").addEventListener("click", () => {
 });
 
 document.getElementById("run").addEventListener("click", () => {
-  let text = document.getElementById("textarea").value;
-  alert(text);
+  let text = document.getElementById("textarea").value.toUpperCase();
+  ws.send(text);
+});
+
+document.getElementById("loop").addEventListener("change", (e) => {
+  if (e.target.checked) {
+    alert("checked");
+  } else {
+    alert("unchecked");
+  }
 });

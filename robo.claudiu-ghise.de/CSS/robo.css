@@ -1,8 +1,9 @@
 body {
   font-family: "Arial", sans-serif;
-  background: #f0f0f0;
+  font-size: 20px;
+  background: #525151;
   margin: 0;
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +11,7 @@ body {
 }
 .slider {
   width: 200px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .status {
@@ -19,8 +20,8 @@ body {
 }
 
 #textarea {
-  min-width: 400px;
-  min-height: 500px;
+  min-width: 300px;
+  min-height: 400px;
   margin: 10px;
   font-size: 1.5rem;
 }
@@ -34,6 +35,13 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100px;
+  height: 50px;
+  transition: ease-in-out 0.1s;
+}
+
+.buttonRun #run:hover {
+  background-color: #2e5230;
 }
 
 .buttonReset #reset {
@@ -45,6 +53,12 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100px;
+  height: 50px;
+}
+
+.buttonReset #reset:hover {
+  background-color: #7a1f1f;
 }
 
 .buttons {
