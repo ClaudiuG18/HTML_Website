@@ -107,35 +107,66 @@ html {
 
 .main-content {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  background-color: #333;
+  background-color: #5e5d5d;
   color: whitesmoke;
-  border: white 2px solid;
 }
 
 .project-image img {
-  width: 20%;
-  height: auto;
-  border-radius: 10%;
+  max-width: 100px;
+  max-height: 200px;
+  border-radius: 5%;
+  margin: 10px;
 }
 .project-image img:hover {
-  transform: scale(1.8);
-  transition: transform 0.5s opacity 0.5s;
-  opacity: 0.8;
+  transform: scale(3) translateY(20%);
+  transition: transform 0.5s;
 }
 
 .project-image {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
+  flex-direction: row;
 }
 
 .title {
   font-size: 1.5rem;
   margin-top: 0%;
   color: blue;
+}
+
+.project-description {
+  align-self: flex-start;
+  margin-left: 2%;
+  margin-top: 10%;
+}
+
+video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+video:hover {
+  transform: scale(1.6);
+  transition: transform 0.5s;
+}
+
+/* 📱 Responsive: Center Everything on Mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
 }
