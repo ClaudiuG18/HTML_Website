@@ -162,3 +162,31 @@
     code {
       color: #cbd5e1
     }
+/* BIG highlighted numbers in the table */
+td.cell-num .num {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+
+  background: rgba(0, 160, 255, 0.16);
+  border: 1px solid rgba(0, 160, 255, 0.35);
+  color: #eaf6ff;
+}
+
+/* Humidity different highlight */
+td.cell-num .num.num-hum {
+  background: rgba(255, 80, 150, 0.16);
+  border: 1px solid rgba(255, 80, 150, 0.35);
+}
+
+/* Offline row: muted */
+tr.offline td.cell-num .num {
+  background: rgba(255, 60, 60, 0.12);
+  border-color: rgba(255, 60, 60, 0.35);
+  color: rgba(255, 255, 255, 0.7);
+}
+

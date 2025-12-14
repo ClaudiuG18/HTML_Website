@@ -165,24 +165,37 @@ async function refreshOverviewAndStatuses() {
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-          <td>${row.deviceId}</td>
-          <td>${
-            isOnline && row.temperature != null
-              ? Number(row.temperature).toFixed(1)
-              : "-"
-          }</td>
-          <td>${
-            isOnline && row.humidity != null
-              ? Number(row.humidity).toFixed(1)
-              : "-"
-          }</td>
-          <td style="${heatingStyle}">${heatingText}</td>
-          <td>${
-            isOnline
-              ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
-              : "-"
-          }</td>
-        `;
+  <td>${row.deviceId}</td>
+
+  <td class="cell-num">
+    <span class="num">
+      ${
+        isOnline && row.temperature != null
+          ? Number(row.temperature).toFixed(1)
+          : "-"
+      }
+    </span>
+  </td>
+
+  <td class="cell-num">
+    <span class="num num-hum">
+      ${
+        isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
+      }
+    </span>
+  </td>
+
+  <td style="${heatingStyle}">${heatingText}</td>
+
+  <td>
+    ${
+      isOnline
+        ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
+        : "-"
+    }
+  </td>
+`;
+
     if (!isOnline) tr.classList.add("offline");
     tbody.appendChild(tr);
   }
@@ -199,8 +212,8 @@ async function applyControlFromUI() {
     const deviceId = document.getElementById("device").value;
     const targetTemp = parseFloat(document.getElementById("targetTemp").value);
     const hysteresis = parseFloat(document.getElementById("hysteresis").value);
-    const minOnMin = parseInt(document.getElementById("minOn").value, 10);
-    const minOffMin = parseInt(document.getElementById("minOff").value, 10);
+    const minOnMin = parseInt(document.getElementById("minOn").value, 1);
+    const minOffMin = parseInt(document.getElementById("minOff").value, 1);
 
     const payload = { deviceId, targetTemp, hysteresis, minOnMin, minOffMin };
 
