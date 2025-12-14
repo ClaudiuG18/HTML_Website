@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Heating Dashboard</title>
@@ -11,38 +12,173 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
 
   <style>
-    :root{
-      --bg:#020617; --text:#e5e7eb; --muted:#9ca3af; --card:#020617; --border:#111827;
-      --ok:#22c55e; --off:#9ca3af; --bad:#ef4444; --accent:#38bdf8;
+    :root {
+      --bg: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #020617;
+      --border: #111827;
+      --ok: #22c55e;
+      --off: #9ca3af;
+      --bad: #ef4444;
+      --accent: #38bdf8;
     }
-    *{box-sizing:border-box;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-    body{margin:0; background:radial-gradient(circle at top,#0b1120 0,#020617 60%); color:var(--text); padding:20px}
-    .container{max-width:1200px;margin:0 auto}
-    h1{margin:0 0 6px;font-size:28px}
-    .subtitle{margin:0 0 18px;color:var(--muted);font-size:13px}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
-    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
-    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:14px 16px; box-shadow:0 18px 40px rgba(15,23,42,.8)}
-    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    label{font-size:12px;color:var(--muted)}
-    select,input{background:#0b1224;color:var(--text);border:1px solid #1f2a44;border-radius:10px;padding:8px 10px}
-    button{background:var(--accent);border:0;border-radius:999px;padding:8px 14px;cursor:pointer;color:#020617;font-weight:600}
-    button:hover{filter:brightness(1.05)}
-    .status{margin-left:auto;font-size:13px;color:var(--muted)}
-    .room-title{font-weight:700;margin-bottom:4px}
-    .room-sub{font-size:12px;color:var(--muted);margin-bottom:8px}
-    .room-status{font-size:13px;margin-top:6px}
-    .room-status.on{color:var(--ok);font-weight:700}
-    .room-status.off{color:var(--off)}
-    .room-status.disc{color:var(--bad);font-weight:700}
-    .chartWrap{position:relative;height:220px;margin-top:10px}
-    table{width:100%;border-collapse:collapse;font-size:13px}
-    thead{color:var(--muted);text-transform:uppercase;font-size:11px}
-    th,td{padding:10px 8px;border-bottom:1px solid #111827;text-align:left}
-    tr.offline{opacity:.45}
-    code{color:#cbd5e1}
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 60%);
+      color: var(--text);
+      padding: 20px
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 16px
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, .8)
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    select,
+    input {
+      background: #0b1224;
+      color: var(--text);
+      border: 1px solid #1f2a44;
+      border-radius: 10px;
+      padding: 8px 10px
+    }
+
+    button {
+      background: var(--accent);
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      color: #020617;
+      font-weight: 600
+    }
+
+    button:hover {
+      filter: brightness(1.05)
+    }
+
+    .status {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    .room-title {
+      font-weight: 700;
+      margin-bottom: 4px
+    }
+
+    .room-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px
+    }
+
+    .room-status {
+      font-size: 13px;
+      margin-top: 6px
+    }
+
+    .room-status.on {
+      color: var(--ok);
+      font-weight: 700
+    }
+
+    .room-status.off {
+      color: var(--off)
+    }
+
+    .room-status.disc {
+      color: var(--bad);
+      font-weight: 700
+    }
+
+    .chartWrap {
+      position: relative;
+      height: 220px;
+      margin-top: 10px
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px
+    }
+
+    thead {
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 11px
+    }
+
+    th,
+    td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #111827;
+      text-align: left
+    }
+
+    tr.offline {
+      opacity: .45
+    }
+
+    code {
+      color: #cbd5e1
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Heating Dashboard</h1>
@@ -52,7 +188,7 @@
     <div class="card" style="margin-bottom:16px">
       <div class="row">
         <div>
-          <label>Room</label><br/>
+          <label>Room</label><br />
           <select id="device">
             <option value="coridor">coridor</option>
             <option value="bucatarie">bucatarie</option>
@@ -62,22 +198,22 @@
         </div>
 
         <div>
-          <label>Target (°C)</label><br/>
+          <label>Target (°C)</label><br />
           <input id="targetTemp" type="number" step="0.1" value="20.0" />
         </div>
 
         <div>
-          <label>Hysteresis (°C)</label><br/>
+          <label>Hysteresis (°C)</label><br />
           <input id="hysteresis" type="number" step="0.1" value="0.5" />
         </div>
 
         <div>
-          <label>Min ON (min)</label><br/>
+          <label>Min ON (min)</label><br />
           <input id="minOn" type="number" step="1" value="10" />
         </div>
 
         <div>
-          <label>Min OFF (min)</label><br/>
+          <label>Min OFF (min)</label><br />
           <input id="minOff" type="number" step="1" value="10" />
         </div>
 
@@ -85,10 +221,6 @@
         <div class="status" id="controlStatus">Ready</div>
       </div>
     </div>
-
-    <!-- Room cards -->
-    <div id="rooms" class="grid"></div>
-
     <!-- Overview table -->
     <div class="card">
       <table id="latest-table">
@@ -102,21 +234,27 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td colspan="5" style="text-align:center;color:var(--muted);padding:12px;">Loading…</td></tr>
+          <tr>
+            <td colspan="5" style="text-align:center;color:var(--muted);padding:12px;">Loading…</td>
+          </tr>
         </tbody>
       </table>
       <div style="margin-top:10px;color:var(--muted);font-size:11px">
         Source: <code>/api/overview</code> + <code>/api/history</code> · refresh every 10s
       </div>
     </div>
+    <!-- Room cards -->
+    <div id="rooms" class="grid"></div>
+
+
   </div>
 
   <script>
     const ROOMS = [
-      { id: "coridor",   name: "Coridor" },
+      { id: "coridor", name: "Coridor" },
       { id: "bucatarie", name: "Bucatarie" },
-      { id: "living",    name: "Living" },
-      { id: "baie",      name: "Baie" },
+      { id: "living", name: "Living" },
+      { id: "baie", name: "Baie" },
     ];
 
     const REFRESH_MS = 10 * 1000;
@@ -136,7 +274,7 @@
       return res.json();
     }
 
-    function setControlStatus(msg, ok=true) {
+    function setControlStatus(msg, ok = true) {
       const el = document.getElementById("controlStatus");
       el.textContent = msg;
       el.style.color = ok ? "var(--muted)" : "var(--bad)";
@@ -160,9 +298,9 @@
 
     async function loadRoomChart(deviceId) {
       const data = await fetchJSON(`/api/history?deviceId=${encodeURIComponent(deviceId)}&limit=200`);
-      const labels = data.map(r => new Date(r.createdAt).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', second:'2-digit', hourCycle:'h23'}));
-      const temps  = data.map(r => Number(r.temperature || 0));
-      const hums   = data.map(r => Number(r.humidity || 0));
+      const labels = data.map(r => new Date(r.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }));
+      const temps = data.map(r => Number(r.temperature || 0));
+      const hums = data.map(r => Number(r.humidity || 0));
 
       const canvas = document.getElementById(`chart-${deviceId}`);
       const ctx = canvas.getContext("2d");
@@ -173,8 +311,8 @@
           data: {
             labels,
             datasets: [
-              { label: "Temp (°C)", data: temps, borderWidth: 2, tension: 0.25, pointRadius: 1, yAxisID:"yTemp" },
-              { label: "Hum (%)",   data: hums,  borderWidth: 2, tension: 0.25, pointRadius: 1, yAxisID:"yHum"  },
+              { label: "Temp (°C)", data: temps, borderWidth: 2, tension: 0.25, pointRadius: 1, yAxisID: "yTemp" },
+              { label: "Hum (%)", data: hums, borderWidth: 2, tension: 0.25, pointRadius: 1, yAxisID: "yHum" },
             ]
           },
           options: {
@@ -183,8 +321,8 @@
             interaction: { mode: "nearest", intersect: false },
             scales: {
               x: { display: true },
-              yTemp: { type:"linear", position:"left", title:{display:true, text:"°C"} },
-              yHum:  { type:"linear", position:"right", grid:{drawOnChartArea:false}, title:{display:true, text:"%"} }
+              yTemp: { type: "linear", position: "left", title: { display: true, text: "°C" } },
+              yHum: { type: "linear", position: "right", grid: { drawOnChartArea: false }, title: { display: true, text: "%" } }
             },
             plugins: {
               zoom: {
@@ -245,7 +383,7 @@
           <td>${isOnline && row.temperature != null ? Number(row.temperature).toFixed(1) : "-"}</td>
           <td>${isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"}</td>
           <td style="${heatingStyle}">${heatingText}</td>
-          <td>${isOnline ? new Date(row.createdAt).toLocaleString([], { hourCycle:"h23" }) : "-"}</td>
+          <td>${isOnline ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" }) : "-"}</td>
         `;
         if (!isOnline) tr.classList.add("offline");
         tbody.appendChild(tr);
@@ -304,4 +442,5 @@
     });
   </script>
 </body>
+
 </html>
