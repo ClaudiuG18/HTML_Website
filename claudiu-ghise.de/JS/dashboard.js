@@ -165,35 +165,25 @@ async function refreshOverviewAndStatuses() {
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-  <td>${row.deviceId}</td>
+  <td data-label="Device">${row.deviceId}</td>
 
-  <td class="cell-num">
-    <span class="num">
-      ${
-        isOnline && row.temperature != null
-          ? Number(row.temperature).toFixed(1)
-          : "-"
-      }
-    </span>
-  </td>
+  <td data-label="Temperature (°C)">${
+    isOnline && row.temperature != null
+      ? Number(row.temperature).toFixed(1)
+      : "-"
+  }</td>
 
-  <td class="cell-num">
-    <span class="num num-hum">
-      ${
-        isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
-      }
-    </span>
-  </td>
+  <td data-label="Humidity (%)">${
+    isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
+  }</td>
 
-  <td style="${heatingStyle}">${heatingText}</td>
+  <td data-label="Heating" style="${heatingStyle}">${heatingText}</td>
 
-  <td>
-    ${
-      isOnline
-        ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
-        : "-"
-    }
-  </td>
+  <td data-label="Time">${
+    isOnline
+      ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
+      : "-"
+  }</td>
 `;
 
     if (!isOnline) tr.classList.add("offline");
