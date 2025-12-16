@@ -34,6 +34,7 @@ function buildRoomCards() {
   for (const r of ROOMS) {
     const card = document.createElement("div");
     card.className = "card";
+    card.id = `card-${r.id}`;
     card.innerHTML = `
           <div class="room-title">${r.name}</div>
           <div class="room-sub">Temperature / Humidity + Heating status</div>
@@ -131,25 +132,19 @@ async function loadRoomChart(deviceId) {
 async function refreshOverviewAndStatuses() {
   const tbody = document.querySelector("#latest-table tbody");
   const now = Date.now();
+  const onlineIds = new Set();
 
   const rows = await fetchJSON("/api/overview");
+
   // custom room order
   const ORDER = ["living", "coridor"];
-
   rows.sort((a, b) => {
     const ia = ORDER.indexOf(a.deviceId);
     const ib = ORDER.indexOf(b.deviceId);
 
-    // both in priority list
     if (ia !== -1 && ib !== -1) return ia - ib;
-
-    // only a is priority
     if (ia !== -1) return -1;
-
-    // only b is priority
     if (ib !== -1) return 1;
-
-    // fallback: alphabetical
     return a.deviceId.localeCompare(b.deviceId);
   });
 
@@ -160,13 +155,19 @@ async function refreshOverviewAndStatuses() {
     const ageMs = hasData ? now - row.createdAt : Infinity;
     const isOnline = hasData && ageMs < DEVICE_TIMEOUT_MS;
 
-    // status for room card
+    // hide/show room card (requires buildRoomCards() to set card id="card-<deviceId>")
+    const cardEl = document.getElementById(`card-${row.deviceId}`);
+    if (cardEl) cardEl.style.display = isOnline ? "" : "none";
+
+    // If offline -> do not show anywhere
+    if (!isOnline) continue;
+
+    onlineIds.add(row.deviceId);
+
+    // status for room card (only for online cards)
     const statusEl = document.getElementById(`status-${row.deviceId}`);
     if (statusEl) {
-      if (!isOnline) {
-        statusEl.textContent = "Status: DISCONNECTED";
-        statusEl.className = "room-status disc";
-      } else if (row.heatingOn) {
+      if (row.heatingOn) {
         statusEl.textContent = "Status: Heating is ON";
         statusEl.className = "room-status on";
       } else {
@@ -175,50 +176,51 @@ async function refreshOverviewAndStatuses() {
       }
     }
 
-    // table display
-    let heatingText = "DISCONNECTED";
-    let heatingStyle = "color:var(--bad);font-weight:700;";
-    if (isOnline) {
-      heatingText = row.heatingOn ? "ON" : "OFF";
-      heatingStyle = row.heatingOn
-        ? "color:var(--ok);font-weight:700;"
-        : "color:var(--off);";
-    }
+    // table display (online only)
+    const heatingText = row.heatingOn ? "ON" : "OFF";
+    const heatingStyle = row.heatingOn
+      ? "color:var(--ok);font-weight:700;"
+      : "color:var(--off);";
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-  <td>${row.deviceId}</td>
+      <td>${row.deviceId}</td>
 
-  <td class="cell-num">
-    <span class="num">${
-      isOnline && row.temperature != null
-        ? Number(row.temperature).toFixed(1)
-        : "-"
-    }</span>
-  </td>
-  <td class="cell-num">
-    <span class="num num-set">${
-      isOnline && row.tempSet != null ? Number(row.tempSet).toFixed(1) : "-"
-    }</span>
-  </td>
-  <td class="cell-num">
-    <span class="num num-hum">${
-      isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
-    }</span>
-  </td>
+      <td class="cell-num">
+        <span class="num">${
+          row.temperature != null ? Number(row.temperature).toFixed(1) : "-"
+        }</span>
+      </td>
 
-  <td style="${heatingStyle}">${heatingText}</td>
+      <td class="cell-num">
+        <span class="num num-set">${
+          row.tempSet != null ? Number(row.tempSet).toFixed(1) : "-"
+        }</span>
+      </td>
 
-  <td>${
-    isOnline
-      ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
-      : "-"
-  }</td>
-`;
+      <td class="cell-num">
+        <span class="num num-offset">${
+          row.tempOffset != null ? Number(row.tempOffset).toFixed(1) : "-"
+        }</span>
+      </td>
 
-    if (!isOnline) tr.classList.add("offline");
+      <td class="cell-num">
+        <span class="num num-hum">${
+          row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
+        }</span>
+      </td>
+
+      <td style="${heatingStyle}">${heatingText}</td>
+
+      <td>${new Date(row.createdAt).toLocaleString([], {
+        hourCycle: "h23",
+      })}</td>
+    `;
+
     tbody.appendChild(tr);
   }
+
+  return onlineIds;
 }
 
 async function loadControlToUI() {
@@ -234,8 +236,15 @@ async function applyControlFromUI() {
     const hysteresis = parseFloat(document.getElementById("hysteresis").value);
     const minOnMin = parseInt(document.getElementById("minOn").value, 1);
     const minOffMin = parseInt(document.getElementById("minOff").value, 1);
-
-    const payload = { deviceId, targetTemp, hysteresis, minOnMin, minOffMin };
+    const tempOffset = parseFloat(document.getElementById("tempOffset").value);
+    const payload = {
+      deviceId,
+      targetTemp,
+      hysteresis,
+      minOnMin,
+      minOffMin,
+      tempOffset: Number.isFinite(tempOffset) ? tempOffset : 0,
+    };
 
     const res = await fetchJSON("/api/control", {
       method: "POST",
@@ -256,13 +265,14 @@ async function applyControlFromUI() {
 }
 
 async function refreshAll() {
-  await refreshOverviewAndStatuses();
-  // load charts per room (safe even if no ESP is connected)
+  const onlineIds = await refreshOverviewAndStatuses();
+
   for (const r of ROOMS) {
+    if (!onlineIds.has(r.id)) continue; // ✅ only connected devices
     try {
       await loadRoomChart(r.id);
     } catch (e) {
-      /* ignore if no data yet */
+      /* ignore */
     }
   }
 }
