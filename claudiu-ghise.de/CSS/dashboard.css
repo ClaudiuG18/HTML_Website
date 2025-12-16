@@ -241,3 +241,45 @@ tr.offline td.cell-num .num {
     font-weight: 800;
   }
 }
+
+
+/* === Control bar: scale up as a whole === */
+
+/* More breathing room inside the card */
+.card .row {
+  gap: 16px;                 /* was 10px */
+}
+
+/* Labels a bit larger */
+.card .row label {
+  font-size: 14px;
+}
+
+/* SELECT (Room) */
+.card .row select {
+  font-size: 18px;
+  height: 44px;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+/* NUMBER inputs – readable but not fat */
+.card .row input[type="number"] {
+  font-size: 17px;
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+/* Apply button matches visual weight */
+#applyBtn {
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Status text slightly bigger */
+#controlStatus {
+  font-size: 14px;
+}

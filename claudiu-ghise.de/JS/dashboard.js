@@ -1,7 +1,7 @@
 const ROOMS = [
   { id: "coridor", name: "Coridor" },
-  { id: "bucatarie", name: "Bucatarie" },
   { id: "living", name: "Living" },
+  { id: "bucatarie", name: "Bucatarie" },
   { id: "baie", name: "Baie" },
 ];
 
@@ -72,6 +72,7 @@ async function loadRoomChart(deviceId) {
             label: "Temp (°C)",
             data: temps,
             borderWidth: 2,
+            borderColor: "#ef4444",
             tension: 0.25,
             pointRadius: 1,
             yAxisID: "yTemp",
@@ -80,6 +81,7 @@ async function loadRoomChart(deviceId) {
             label: "Hum (%)",
             data: hums,
             borderWidth: 2,
+            borderColor: "#3b82f6",
             tension: 0.25,
             pointRadius: 1,
             yAxisID: "yHum",
@@ -131,6 +133,26 @@ async function refreshOverviewAndStatuses() {
   const now = Date.now();
 
   const rows = await fetchJSON("/api/overview");
+  // custom room order
+  const ORDER = ["living", "coridor"];
+
+  rows.sort((a, b) => {
+    const ia = ORDER.indexOf(a.deviceId);
+    const ib = ORDER.indexOf(b.deviceId);
+
+    // both in priority list
+    if (ia !== -1 && ib !== -1) return ia - ib;
+
+    // only a is priority
+    if (ia !== -1) return -1;
+
+    // only b is priority
+    if (ib !== -1) return 1;
+
+    // fallback: alphabetical
+    return a.deviceId.localeCompare(b.deviceId);
+  });
+
   tbody.innerHTML = "";
 
   for (const row of rows) {
@@ -165,21 +187,29 @@ async function refreshOverviewAndStatuses() {
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-  <td data-label="Device">${row.deviceId}</td>
+  <td>${row.deviceId}</td>
 
-  <td data-label="Temperature (°C)">${
-    isOnline && row.temperature != null
-      ? Number(row.temperature).toFixed(1)
-      : "-"
-  }</td>
+  <td class="cell-num">
+    <span class="num">${
+      isOnline && row.temperature != null
+        ? Number(row.temperature).toFixed(1)
+        : "-"
+    }</span>
+  </td>
+  <td class="cell-num">
+    <span class="num num-set">${
+      isOnline && row.tempSet != null ? Number(row.tempSet).toFixed(1) : "-"
+    }</span>
+  </td>
+  <td class="cell-num">
+    <span class="num num-hum">${
+      isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
+    }</span>
+  </td>
 
-  <td data-label="Humidity (%)">${
-    isOnline && row.humidity != null ? Number(row.humidity).toFixed(1) : "-"
-  }</td>
+  <td style="${heatingStyle}">${heatingText}</td>
 
-  <td data-label="Heating" style="${heatingStyle}">${heatingText}</td>
-
-  <td data-label="Time">${
+  <td>${
     isOnline
       ? new Date(row.createdAt).toLocaleString([], { hourCycle: "h23" })
       : "-"
