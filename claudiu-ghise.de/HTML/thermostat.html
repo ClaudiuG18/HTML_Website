@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password manager</title>
+  <link rel="stylesheet" href="/CSS/pass-man.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="/Image/Claudiu_Ghise_100x40.png"></div>
+    <div class="nav-buttons">
+      <a href="/index.html" class="nav-btn">Home</a>
+      <a href="/HTML/projects.html" class="nav-btn">Projects</a>
+    </div>
+    <div class="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+  </nav>
+  <!--NAVBAR END-->
+
+  <!-- Description -->
+  <div class="main-content">
+    <div class="text">
+      <h1>Thermostat</h1>
+      <p>ESP-Based Smart Temperature Control System
+
+        This project is a smart home temperature monitoring and control system built using ESP8266/ESP32
+        microcontrollers with relay modules for automated heating and cooling management across multiple rooms.
+
+        Each room is equipped with a temperature and humidity sensor that continuously measures environmental conditions
+        and sends real-time data to a web-based dashboard. The system provides live visualization of temperature,
+        humidity, and device status, allowing users to monitor multiple rooms from any browser.
+
+        The dashboard enables manual configuration of target temperatures and hysteresis values for each room. Based on
+        these settings, the ESP devices automatically control relays to switch heating or cooling systems on or off,
+        maintaining a stable indoor climate with minimal energy waste.
+
+      </p>
+      <h2>Key features :</h2>
+      <ul>
+        <li>Real-time temperature and humidity monitoring per room</li>
+        <li>Web-based control dashboard (mobile and desktop friendly)</li>
+        <li>ESP8266/ESP32-based IoT architecture with relay control</li>
+        <li>Configurable setpoints and tolerance (hysteresis)</li>
+        <li>Sensor calibration support per device</li>
+        <li>Multi-room scalability (modular design)</li>
+        <li>Live device status (online/offline, relay state)</li>
+      </ul>
+      <h2>Technologies used :</h2>
+      <ul>
+        <li>ESP8266 / ESP32 (microcontrollers)</li>
+        <li>BME 280 sensor (temperature & humidity)</li>
+        <li>Relay modules for load switching</li>
+        <li>Web interface (HTML, CSS, JavaScript NextJS)</li>
+        <li>Backend communication (REST API)</li>
+      </ul>
+    </div>
+    <div class="pics">
+      <div><img id="pm1" src="/Image/thermo1.jpeg" alt="Thermostat Image 1"></div>
+      <div><img src="/Image/thermo2.jpeg" alt="Thermostat Image 2"></div>
+      <div><img src="/Image/thermo3.jpeg" alt="Thermostat Image 3"></div>
+      <div><img src="/Image/thermoapp.png" alt="Thermostat Image 4"></div>
+
+    </div>
+  </div>
+  <!-- Description end -->
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="git-logo">
+      <img src="/Image/github.png" alt="GitHub Logo">
+    </div>
+    <div class="git-link">
+      <a href="https://github.com/ClaudiuG18" class="footer-link">GitHub</a>
+    </div>
+    <div class="impress-div">
+      <a href="/HTML/impressum.html" class="footer-link">Impressum</a>
+    </div>
+  </div>
+  <!--FOOTER END-->
+</body>
+<script src="/JS/hamburger_btn.js"></script>
+
+</html>
